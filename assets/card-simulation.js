@@ -3,18 +3,7 @@
   const stage = document.querySelector('.trading-stage');
   if (!stage) return;
   const ns = 'http://www.w3.org/2000/svg';
-  const graph = stage.querySelector('.balance-graph');
-  const area = graph.querySelector('path');
-  const line = graph.querySelector('path:last-child');
-  line.classList.add('simulation-line');
-  line.removeAttribute('pathLength');
-  const dot = document.createElementNS(ns, 'circle');
-  dot.setAttribute('r','3.5'); dot.setAttribute('fill','#ffb58c');
-  dot.classList.add('simulation-cursor'); graph.append(dot);
-  const balance = stage.querySelector('.balance-value');
-  const gain = stage.querySelector('.balance-bottom b');
   stage.querySelector('.preview-note').textContent = 'Market simulation · USDT';
-  stage.querySelector('.balance-bottom span').textContent = 'Portfolio simulation';
   const markets = [...stage.querySelectorAll('.preview-market-row')].map((row,i) => {
     const price = row.querySelector('.preview-price');
     const label = document.createElement('span');
@@ -49,9 +38,6 @@
     return d;
   }
   function draw(t) {
-    const points=curve(320,125,25,t,0),d=path(points),end=points[points.length-1];
-    line.setAttribute('d',d);area.setAttribute('d',`${d} V130 H0Z`);
-    dot.setAttribute('cx',end[0]);dot.setAttribute('cy',end[1]);
     markets.forEach((market,i)=>{
       const pts=curve(80,30,12,t,i*2);market.path.setAttribute('d',path(pts));
       market.marker.setAttribute('cx',80);market.marker.setAttribute('cy',pts[pts.length-1][1]);
@@ -67,11 +53,6 @@
         market.change.textContent=`+${(2.84+change*100).toFixed(2)}%`;
         market.label.classList.toggle('tick-down',Math.cos(t*.55+i)<0);
       });
-      const amount=15475+Math.sin(t*.4)*28+Math.sin(t*.15)*15;
-      const [whole,cents]=money.format(amount).split('.');
-      balance.replaceChildren(document.createTextNode('$'+whole));
-      const fraction=document.createElement('span');fraction.textContent='.'+cents+' USD';balance.append(fraction);
-      gain.textContent=`↗ +${(12.8+Math.sin(t*.4)*.2).toFixed(1)}%`;
       step.textContent=['Matching','Converting','Confirmed'][Math.floor(t/2)%3];
     }
   }

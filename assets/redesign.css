@@ -141,3 +141,22 @@ footer{background:#080808!important}
 #about-bitqik h3{font-size:19px;font-weight:500;margin:8px 0}#about-bitqik .about-purpose p{margin:0;font-size:12px;line-height:1.9}
 .about-values{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid #ffffff0d;padding-top:24px;font-size:11px}.about-values>span{border:1px solid #ffffff12;border-radius:20px;padding:6px 12px;color:#aaa}.about-values>.about-values-label{border:0;padding-left:0;padding-right:10px;color:#eee}
 @media(max-width:767px){#about-bitqik{padding:10px 16px 45px}.about-wrap{grid-template-columns:1fr;gap:25px;padding:25px}#about-bitqik h2{font-size:27px}.about-purpose article{padding:20px}.about-values{gap:7px}.about-values>span{font-size:10px;padding:5px 10px}.about-values>.about-values-label{width:100%;margin-bottom:3px}}
+/* TradingView market data replaces the simulated portfolio card. */
+.tv-market-card .preview-label{justify-content:space-between;gap:8px;margin-bottom:16px}
+.tv-market-card .preview-label>span:last-child{margin-left:auto;font-size:9px;color:#aaa}
+.tv-symbol-tabs{display:flex;padding:4px;gap:3px;border-radius:20px;background:#090909}
+.tv-symbol-tabs button{flex:1;font-size:10px;padding:6px 8px;border:0;border-radius:16px;color:#909090;background:transparent;transition:background .2s,color .2s}
+.tv-symbol-tabs button.selected{color:#ffb18a;background:#ff692d22}
+.tv-symbol-tabs button:focus-visible{outline:2px solid #ff692d;outline-offset:2px}
+.tv-chart-area{min-height:280px;position:relative;margin:12px -6px 0}
+.tv-chart-host{width:100%;min-height:280px}
+.tv-market-card .tradingview-widget-container{width:100%}
+.tv-market-card .tradingview-widget-copyright{font:10px Inter,sans-serif;text-align:center;line-height:20px;color:#888}
+.tv-market-card .tradingview-widget-copyright a{color:#aaa}
+.tv-feed-footer{display:flex;justify-content:space-between;align-items:center;gap:6px;border-top:1px solid #ffffff0b;padding-top:11px;font:9px Inter,sans-serif;color:#888}
+.tv-quote-unit{color:#e19b71}
+.tv-chart-fallback{padding:70px 12px 25px;text-align:center;font-size:12px;color:#a5a5a5}
+.tv-chart-fallback p{margin-bottom:15px}
+.tv-chart-fallback .tv-retry{display:block;padding:9px 18px;margin:0 auto 15px;border:1px solid #ff692d44;border-radius:8px;color:#ff9a67;background:#ff692d10}
+.tv-open-chart{display:inline-block;color:#ff9a67;text-decoration:underline;font-size:11px}
+@media(max-width:600px){.trading-stage{grid-template-columns:1fr}.trading-stage #hero-swap{grid-column:auto}.tv-market-card{padding:22px}.tv-market-card .tv-chart-area{min-height:280px}.market-preview .preview-market-row svg{display:block;width:65px}.market-preview .preview-price{font-size:12px}.market-preview .coin-symbol{width:30px;height:30px}}
