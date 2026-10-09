@@ -1224,16 +1224,6 @@ function setupEventListeners() {
     });
   }
 
-  // Theme toggle
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      showNotification(isDark ? 'ເປີດໂໝດມືດ (Dark Mode)' : 'ເປີດໂໝດສະຫວ່າງ (Light Mode)', 'info');
-    });
-  }
-
   // Search Modal
   const searchBtn = document.getElementById('searchBtn');
   const searchModal = document.getElementById('searchModal');

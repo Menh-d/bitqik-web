@@ -1,0 +1,73 @@
+/* Shared theme switch and light palette; dark remains the default brand theme. */
+#mainHeader.neon-nav #themeToggle,.neon-nav #themeToggle{display:inline-flex!important;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:7px 10px;border:1px solid #ffffff18;border-radius:24px;background:#ffffff05;color:#d8dfe2;font:11px Inter,Arial,sans-serif;cursor:pointer;flex-shrink:0}
+.theme-switch-track{width:24px;height:14px;padding:2px;background:#ff8b5040;border:1px solid #ffac7950;border-radius:20px;display:block}
+.theme-switch-track>span{display:block;width:8px;height:8px;border-radius:50%;background:#ffb17d;transform:translateX(10px);transition:transform .2s}
+.theme-switch[aria-checked="false"] .theme-switch-track>span{transform:translateX(0);background:#fff}
+.news-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+html[data-theme="light"]{--surface:#fff;--accent:#e75d23}
+html[data-theme="light"] body{background:#f7f6f3!important;color:#222b32!important}
+html[data-theme="light"] body>section{background-color:#f7f6f3!important;border-color:#1f293714!important}
+html[data-theme="light"] #hero{background:radial-gradient(ellipse at 50% 0%,#ffb48628,transparent 65%)}
+html[data-theme="light"] #why-us{background:radial-gradient(ellipse at 105% 40%,#ffab7828,transparent 40%)!important}
+html[data-theme="light"] .hero-intro h1>span:nth-of-type(2){color:#222b32}
+html[data-theme="light"] .hero-intro p{color:#5c6772}
+html[data-theme="light"] .hero-intro>div:first-child{background:#fff8;color:#a5441a}
+html[data-theme="light"] .text-white,html[data-theme="light"] .text-slate-100,html[data-theme="light"] .text-slate-200,html[data-theme="light"] .text-slate-300{color:#26313a!important}
+html[data-theme="light"] .text-slate-400,html[data-theme="light"] .text-slate-500{color:#64717c!important}
+html[data-theme="light"] [class*="border-white/"]{border-color:#24323e18!important}
+html[data-theme="light"] [class*="bg-white/"]{background-color:#21313b06}
+html[data-theme="light"] button[class*="bg-brand"],html[data-theme="light"] button[class*="from-brand"],html[data-theme="light"] button[class*="bg-brand"] .text-white,html[data-theme="light"] .hero-intro>div:nth-child(3)>button,html[data-theme="light"] .primary{color:white!important}
+html[data-theme="light"] .showcase-card,html[data-theme="light"] #hero-swap,html[data-theme="light"] #why-us .grid>.group,html[data-theme="light"] #products .grid>.group{background:linear-gradient(135deg,#fff,#f0eeea)!important;border-color:#28333c16;box-shadow:0 16px 40px #29374410,inset 0 1px #fff}
+html[data-theme="light"] .glass-panel,html[data-theme="light"] [class*="bg-[#0f1420]"],html[data-theme="light"] [class*="bg-[#121826]"],html[data-theme="light"] [class*="bg-[#0b0e15]"],html[data-theme="light"] [class*="bg-[#161d2e]"]{background:#fff!important}
+html[data-theme="light"] body>section [class*="bg-[#0f1420]"],html[data-theme="light"] body>section [class*="bg-[#121826]"],html[data-theme="light"] body>section [class*="bg-[#0b0e15]"]{background:#fff!important}
+html[data-theme="light"] .balance-tabs,html[data-theme="light"] .tv-symbol-tabs{background:#e9e7e3;color:#5c6670}
+html[data-theme="light"] .balance-tabs b,html[data-theme="light"] .tv-symbol-tabs button.selected{background:#ff692d16;color:#a5421a}
+html[data-theme="light"] .preview-market-row{border-color:#24313d12}
+html[data-theme="light"] .preview-price small,html[data-theme="light"] .balance-bottom b{color:#a54d22}
+html[data-theme="light"] .about-bitqik-card{background:#fff!important;border-color:#24313d18!important}
+html[data-theme="light"] footer{background:#efede9!important;border-color:#24313d15!important}
+html[data-theme="light"] .neon-brand img,html[data-theme="light"] footer img{filter:brightness(0);opacity:.9}
+html[data-theme="light"] #mainHeader.neon-nav,html[data-theme="light"] .news-header.neon-nav{background:linear-gradient(135deg,#ffffffbb,#f2f2f0aa)!important;border-color:#26323e18!important;box-shadow:inset 0 1px #fff,0 8px 28px #2935440d}
+html[data-theme="light"] .neon-brand>span{color:#6d7880}
+html[data-theme="light"] #mainHeader.neon-nav nav.neon-menu,html[data-theme="light"] .neon-nav nav.neon-menu{background:#21313b04;border-color:#24313c08}
+html[data-theme="light"] #mainHeader.neon-nav nav .neon-nav-link,html[data-theme="light"] .neon-nav nav .neon-nav-link{color:#59656e}
+html[data-theme="light"] #mainHeader.neon-nav nav .neon-nav-link.is-previewed,html[data-theme="light"] .neon-nav nav .neon-nav-link.is-previewed{color:#222b32}
+html[data-theme="light"] .nav-liquid-slider{background:#ffffff80;border-color:#ffffffd9;box-shadow:0 2px 10px #29354412,inset 0 1px #fff}
+html[data-theme="light"] .neon-news-badge{color:#8a4a24;background:#e97c1910;border-color:#e97c1920}
+html[data-theme="light"] #mainHeader.neon-nav #langBtn,html[data-theme="light"] #mainHeader.neon-nav #currencyBtn,html[data-theme="light"] #mainHeader.neon-nav #searchBtn,html[data-theme="light"] #mainHeader.neon-nav #mobileMenuBtn,html[data-theme="light"] .neon-nav #themeToggle{color:#3b4852;background:#ffffff70;border-color:#24313e18}
+html[data-theme="light"] #mainHeader.neon-nav [onclick="openAuthModal('register')"],html[data-theme="light"] .neon-exchange{background:#20292e;color:#fff!important;border-color:#20292e}
+html[data-theme="light"] #mainHeader.neon-nav [onclick="openAuthModal('register')"] span{color:#fff!important}
+html[data-theme="light"] #mainHeader.neon-nav .neon-mobile-menu{background:#ffffff40;border-color:#24313d0a}
+html[data-theme="light"] #mainHeader.neon-nav #langDropdown,html[data-theme="light"] #mainHeader.neon-nav #currencyDropdown{background:#fffffff2;color:#27333d;border-color:#24313d18}
+html[data-theme="light"] .announcement-strip{background:linear-gradient(135deg,#ffffff90,#fff6ef66);border-color:#fff9;box-shadow:inset 0 1px #fff;color:#36434d}
+html[data-theme="light"] .announcement-label,html[data-theme="light"] .announcement-count{color:#a2451d}
+html[data-theme="light"] .announcement-trigger{color:#94411c;background:#fff8;border-color:#bc5c252c}
+html[data-theme="light"] .announcement-dialog,html[data-theme="light"] #article-dialog{background:#faf9f6;color:#26313a;border-color:#cc6d352f}
+html[data-theme="light"] .announcement-dialog p,html[data-theme="light"] #article-dialog p{color:#5a6670}
+html[data-theme="light"] .announcement-dialog h2,html[data-theme="light"] .announcement-content a{color:#a5451b}
+html[data-theme="light"] .announcement-close,html[data-theme="light"] .close-dialog{color:#374651;background:#27313b08;border-color:#27313b18}
+html[data-theme="light"] .news-card,html[data-theme="light"] .featured,html[data-theme="light"] .news-footer-cta{background:#fff;border-color:#26313b16}
+html[data-theme="light"] .feature-art,html[data-theme="light"] .card-art{background:radial-gradient(ellipse at 50% 100%,#ff9c4925,transparent 75%),linear-gradient(135deg,#f0ebe5,#fff)}
+html[data-theme="light"] .news-hero p,html[data-theme="light"] .feature-copy p,html[data-theme="light"] .news-card p,html[data-theme="light"] .edition,html[data-theme="light"] footer p{color:#66717a}
+html[data-theme="light"] .filters button,html[data-theme="light"] .search,html[data-theme="light"] .news-header input{background:#fff;color:#4a5964;border-color:#24313b15}
+html[data-theme="light"] .filters button.selected{background:#ff692d15;color:#a4451e}
+html[data-theme="light"] .eyebrow,html[data-theme="light"] .read-button{color:#ae501f}
+html[data-theme="light"] .scroll-coin-scene{opacity:.5}
+html[data-theme="light"] .coin-marquee-scene{opacity:.18}
+@media(max-width:480px){#mainHeader.neon-nav .nav-actions>[onclick="openAuthModal('register')"]{display:none!important}.neon-nav #themeToggle{gap:5px;padding:7px 8px;font-size:10px}}
+@media(max-width:400px){.news-header.neon-nav .neon-brand img{width:90px}.news-tools{gap:6px}.news-header.neon-nav .neon-exchange{font-size:9px;padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.theme-switch-track>span{transition:none}}
+html[data-theme="light"] #mainHeader.neon-nav #themeToggle{color:#35444e;background:#ffffff80;border-color:#24313e18}
+html[data-theme="light"] #mainHeader.neon-nav [onclick="openAuthModal('login')"]{color:#455560}
+html[data-theme="light"] #mainHeader.neon-nav .neon-mobile-menu nav{background:#26333d04}
+html[data-theme="light"] .about-wrap{background:linear-gradient(135deg,#fff,#f2efe9);border-color:#26333d16}
+html[data-theme="light"] #about-bitqik p,html[data-theme="light"] #about-bitqik .about-lead{color:#5b6973}
+html[data-theme="light"] .about-values>span{color:#51606b;border-color:#26333d15}
+html[data-theme="light"] .about-purpose article,html[data-theme="light"] .about-values{border-color:#26333d12}
+html[data-theme="light"] .about-source{color:#a34820}
+html[data-theme="light"] .preview-price{color:#344550}
+html[data-theme="light"] .text-emerald-400,html[data-theme="light"] .text-emerald-500{color:#08734e!important}
+html[data-theme="light"] .text-brand-300,html[data-theme="light"] .text-brand-400{color:#a74719!important}
+html[data-theme="light"] select{background:#eeeae5!important;color:#26333d!important}
+html[data-theme="light"] #stickyMobileBar{background:#fffffff0;border-color:#e7793938;box-shadow:0 -5px 25px #24313b10}
+html[data-theme="light"] .crypto-orbit-background{opacity:.16}

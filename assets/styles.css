@@ -84,52 +84,7 @@
   box-shadow: 0 10px 30px -10px rgba(255, 102, 0, 0.25);
 }
 
-/* Light Mode Overrides */
-html:not(.dark) body {
-  background-color: #f8fafc;
-  color: #0f172a;
-}
-
-html:not(.dark) #mainHeader {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-color: #e2e8f0;
-}
-
-html:not(.dark) #why-us,
-html:not(.dark) #how-it-works,
-html:not(.dark) #learn,
-html:not(.dark) #faq {
-  background-color: #f1f5f9;
-  border-color: #e2e8f0;
-}
-
-html:not(.dark) .bg-\[\#0f1420\],
-html:not(.dark) .bg-\[\#0b0e15\],
-html:not(.dark) .bg-\[\#080a0f\] {
-  background-color: #ffffff !important;
-  border-color: #e2e8f0 !important;
-  color: #0f172a !important;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-}
-
-html:not(.dark) .text-white {
-  color: #0f172a !important;
-}
-
-html:not(.dark) .text-slate-400,
-html:not(.dark) .text-slate-300 {
-  color: #64748b !important;
-}
-
-html:not(.dark) footer {
-  background-color: #0b0f19 !important;
-  color: #94a3b8 !important;
-}
-
-html:not(.dark) footer .text-white {
-  color: #ffffff !important;
-}
-
+/* Theme palettes are defined in theme.css. */
 /* Sparkline canvas styling */
 .sparkline-canvas {
   width: 90px;

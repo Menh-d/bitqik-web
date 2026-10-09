@@ -46,7 +46,7 @@
     const script=document.createElement('script');script.async=true;
     script.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
     script.textContent=JSON.stringify({
-      symbol:data.symbol,width:'100%',height:250,locale:'en',dateRange:'1D',colorTheme:'dark',
+      symbol:data.symbol,width:'100%',height:250,locale:'en',dateRange:'1D',colorTheme:document.documentElement.dataset.theme==='light'?'light':'dark',
       isTransparent:true,autosize:false,noTimeScale:false,chartOnly:false,
       trendLineColor:'rgba(255,105,45,1)',underLineColor:'rgba(255,105,45,0.24)',
       underLineBottomColor:'rgba(255,105,45,0)',lineWidth:2,
@@ -58,5 +58,6 @@
   }
   card.querySelectorAll('[data-tv-symbol]').forEach(button=>button.addEventListener('click',()=>{if(active!==button.dataset.tvSymbol)render(button.dataset.tvSymbol)}));
   card.querySelector('.tv-retry').addEventListener('click',()=>render(active));
+  document.addEventListener('bitqik:themechange',()=>render(active));
   render(active);
 })();
