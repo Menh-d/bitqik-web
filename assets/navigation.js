@@ -20,6 +20,7 @@
     if(!links.length)return;
     links.forEach((link,index)=>{
       const svg=link.querySelector('svg');
+      if(!svg)return;
       const well=document.createElement('span');well.className='nav-icon-well';
       well.style.setProperty('--icon-delay',`${index*-.65}s`);
       svg.replaceWith(well);well.append(svg);
@@ -49,4 +50,15 @@
     if(document.fonts)document.fonts.ready.then(schedule);
     schedule();
   });
+})();
+
+// Careers uses the existing careers panel on the home page.
+(() => {
+  if(!document.getElementById('careersModal'))return;
+  document.querySelectorAll('[data-nav-item="careers"]').forEach(link=>link.addEventListener('click',event=>{
+    event.preventDefault();
+    document.getElementById('mobileDrawer')?.classList.add('hidden');
+    openCareersModal();
+  }));
+  if(new URLSearchParams(location.search).get('careers')==='1')openCareersModal();
 })();

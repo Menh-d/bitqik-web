@@ -968,6 +968,8 @@ function setLanguage(lang) {
 }
 
 function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.dispatchEvent(new CustomEvent('bitqik:languagechange', {detail:lang}));
   const dict = i18nDict[lang] || i18nDict['lo'];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
