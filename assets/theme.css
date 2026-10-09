@@ -71,3 +71,6 @@ html[data-theme="light"] .text-brand-300,html[data-theme="light"] .text-brand-40
 html[data-theme="light"] select{background:#eeeae5!important;color:#26333d!important}
 html[data-theme="light"] #stickyMobileBar{background:#fffffff0;border-color:#e7793938;box-shadow:0 -5px 25px #24313b10}
 html[data-theme="light"] .crypto-orbit-background{opacity:.16}
+/* Preserve the black material in light mode instead of washing it out. */
+html[data-theme="light"] .scroll-coin-scene{opacity:.85}
+@media(max-width:600px){html[data-theme="light"] .scroll-coin-scene{opacity:.5}}

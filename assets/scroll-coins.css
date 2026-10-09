@@ -51,3 +51,15 @@ body>main{position:relative;z-index:1}
 html.dark body>section{background-color:transparent!important}
 .crypto-orbit-background{mask-image:radial-gradient(ellipse at 50% 38%,#0008 0%,#000b 40%,#000 75%)}
 .orbit-track-0{opacity:.4}.orbit-track-1{opacity:.55}.orbit-track-2{opacity:.65}
+/* Glossy obsidian coins: deep black faces, polished bevels and studio reflections. */
+.scroll-coin-anchor{--metal-light:#737c87;--metal:#15191e;--metal-dark:#020305;--emboss:#9eaab7;--shadow:#000;filter:drop-shadow(0 18px 18px #0009)}
+.coin-face{background:radial-gradient(ellipse at 30% 10%,#cad9e03b,transparent 31%),linear-gradient(135deg,#030507 0%,#171d23 19%,#020304 38%,#090d12 68%,#2e3944 84%,#030406 100%);border-color:#667380;box-shadow:inset 0 0 0 2px #030406,inset 0 0 0 3px #a5b5c166,inset 0 0 0 6px #080c11,inset 3px 4px 7px #c5d4df22,inset -8px -12px 18px #000c,0 0 1px #ccd8e080}
+.coin-face:after{content:'';position:absolute;inset:5px;border-radius:50%;pointer-events:none;background:linear-gradient(120deg,transparent 18%,#e2f0ff06 28%,#e2f0ff38 31%,#e2f0ff0a 35%,transparent 40%,transparent 69%,#b9d6ef12 77%,transparent 83%);box-shadow:inset 0 2px 3px #e2f0ff55,inset 0 -1px 2px #96b1c425}
+.coin-edge{background:repeating-conic-gradient(from 0deg,#020304 0deg 1deg,#141b23 1deg 2deg,#5c6b7980 2deg 2.5deg,#06090d 2.5deg 4deg);border-color:#36414d}
+.coin-rim{border-color:#8d9fae55;box-shadow:inset 0 0 0 2px #0006,inset 0 1px 2px #d8e6f333,inset 0 -2px 4px #000b}
+.coin-face svg{fill:#a3afbb;filter:drop-shadow(2px 3px 0 #010203) drop-shadow(-1px -1px 0 #e0edff88) drop-shadow(0 1px 2px #0009)}
+.coin-inscription,.coin-engraving{color:#9eacba;text-shadow:0 1px 1px #000,-.5px -.5px #d7e6f330}
+.orbit-token{background:radial-gradient(ellipse at 24% 12%,#d9e9ff33,transparent 32%),linear-gradient(135deg,#202832,#020305 45%,#0b1118 70%,#3a4755 87%,#030507);border-color:#8899a855;box-shadow:inset 0 0 0 2px #020305,inset 0 0 0 3px #b8cce033,inset 0 3px 6px #dbeeff16,2px 4px 0 #020305,3px 5px 0 #73869844,0 10px 20px #0009}
+.orbit-token:after{content:'';position:absolute;inset:4px;border-radius:50%;pointer-events:none;background:linear-gradient(120deg,transparent 20%,#ddecff24 31%,transparent 40%,transparent 73%,#a9c3da15 81%,transparent 87%);box-shadow:inset 0 1px 2px #dcecff44}
+.orbit-token svg{fill:#9dabb9;filter:drop-shadow(1px 2px 0 #000) drop-shadow(-.5px -.5px 0 #deedff66)}
+.orbit-token span{color:#95a4b4}
