@@ -67,20 +67,36 @@
 /* Adapted from the supplied glass pointer reference: clear lens and spring motion. */
 .neon-nav{--spring-easing:cubic-bezier(.22,1,.36,1)}
 @supports(transition-timing-function:linear(0,1)){.neon-nav{--spring-easing:linear(0,0.0018,0.0069 1.15%,0.026 2.3%,0.0637,0.1135 5.18%,0.2229 7.78%,0.5977 15.84%,0.7014,0.7904,0.8641,0.9228,0.9676 28.8%,1.0032 31.68%,1.0225,1.0352 36.29%,1.0431 38.88%,1.046 42.05%,1.0448 44.35%,1.0407 47.23%,1.0118 61.63%,1.0025 69.41%,0.9981 80.35%,0.9992 99.94%)}}
-/* Smoked orange glass switch inspired by the supplied capsule reference. */
-#mainHeader.neon-nav,.news-header.neon-nav{border-radius:32px;border-color:#ffffff0c!important;background:linear-gradient(145deg,#222326e6,#121315ed 55%,#1c1b1be6)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 1px #ffffff18,inset 0 -1px 1px #000b,0 14px 30px #0008}
-.neon-nav:before{padding:1px;opacity:.35;background:conic-gradient(from var(--nav-light-angle),transparent 0deg,#ffffff08 35deg,#ffbc7b75 60deg,#ffe4ca99 72deg,#ff8a4055 84deg,transparent 112deg,transparent 360deg)}
-.neon-nav:after{display:none}
-#mainHeader.neon-nav nav.neon-menu,.neon-nav nav.neon-menu{border-radius:50px;background:linear-gradient(180deg,#08090bd9,#101113c9);box-shadow:inset 0 4px 8px #0009,inset 0 -1px 1px #ffffff0d;border:5px solid #ffffff04}
-.nav-liquid-slider{overflow:visible;border:1px solid #ffe1cb60;border-radius:40px;background:radial-gradient(ellipse at 0% 55%,#ff6f12b3,transparent 75%),linear-gradient(115deg,#e773395e,#ba8e804a 58%,#e6e4e354);box-shadow:inset 0 2px 3px #ffffff55,inset 2px 0 4px #ffb56b55,inset -2px -1px 4px #ffffff40,inset 0 -6px 8px #30110d33,0 6px 12px #0006,-9px 0 18px #ff6d1538;backdrop-filter:blur(8px) saturate(160%);-webkit-backdrop-filter:blur(8px) saturate(160%)}
-.nav-liquid-slider:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,#ffffff23,transparent 24%,transparent 76%,#ffffff18);box-shadow:inset 0 8px 8px -8px #19191bd9,inset 0 -8px 8px -8px #19191b99}
-.nav-liquid-slider:after{content:'';position:absolute;left:6px;top:35%;width:4px;height:24px;background:radial-gradient(circle,#ffe0bd70 1px,#75250b40 1.5px,transparent 2px) 0 0/4px 8px;pointer-events:none;opacity:.7}
-.slider-ready .nav-liquid-slider{transition:transform .8s var(--spring-easing),width .8s var(--spring-easing),height .8s var(--spring-easing),opacity .2s}
-.neon-nav-link .nav-icon-well{border-radius:50%;background:linear-gradient(145deg,#262729,#111214);box-shadow:3px 4px 7px #0009,inset 0 1px 1px #ffffff16;border-color:#ffffff0a}
-.neon-nav-link.is-previewed .nav-icon-well{background:linear-gradient(145deg,#bfa29338,#5a38342e);border-color:#ffe4d34d;box-shadow:inset 1px 2px 4px #0003,inset 0 -1px 1px #ffffff30,0 1px 2px #ffffff15;transform:translateY(0)}
-#mainHeader.neon-nav nav .neon-nav-link.is-previewed,.neon-nav nav .neon-nav-link.is-previewed{color:#fff4e7;text-shadow:0 1px 2px #421c0dcc}
+/* Minimal charcoal frosted glass navigation, inspired by the mindfulness UI. */
+#mainHeader.neon-nav,.news-header.neon-nav{border-radius:36px;border-color:#ffffff17!important;background:radial-gradient(ellipse at 18% 0%,#9eafb21a,transparent 60%),linear-gradient(130deg,#30383b88,#1c22258a)!important;backdrop-filter:blur(26px) saturate(75%);-webkit-backdrop-filter:blur(26px) saturate(75%);box-shadow:inset 0 1px 0 #ffffff20,inset 0 -1px 0 #ffffff05,0 10px 28px #0004}
+.neon-nav:before,.neon-nav:after{display:none}
+.neon-nav .neon-brand{border-right:0;padding-right:12px}.neon-brand>span{color:#a7adaf;letter-spacing:1.5px}
+#mainHeader.neon-nav nav.neon-menu,.neon-nav nav.neon-menu{border-radius:50px;background:#11191b28;border:1px solid #ffffff05;box-shadow:inset 0 1px 2px #0002}
+#mainHeader.neon-nav nav .neon-nav-link,.neon-nav nav .neon-nav-link{font-weight:400;letter-spacing:0;color:#aeb6b8}
+#mainHeader.neon-nav nav .neon-nav-link.is-active,.neon-nav nav .neon-nav-link.is-active{color:#d1d8da}
+#mainHeader.neon-nav nav .neon-nav-link.is-previewed,.neon-nav nav .neon-nav-link.is-previewed{color:#fff;text-shadow:none}
+.nav-liquid-slider{overflow:hidden;border:1px solid #ffffff30;border-radius:40px;background:linear-gradient(140deg,#a1afb322,#7b878b0d);box-shadow:inset 0 1px 0 #ffffff18,inset 0 -1px 0 #ffffff09,0 3px 12px #0002;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-liquid-slider:before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse at 0% 0%,#ffffff0a,transparent 65%);box-shadow:none}
+.nav-liquid-slider:after{content:'';position:absolute;bottom:6px;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background:#ff8b50;box-shadow:0 0 7px #ff7d3540}
+.slider-ready .nav-liquid-slider{transition:transform .7s var(--spring-easing),width .7s var(--spring-easing),height .7s var(--spring-easing),opacity .2s}
 .neon-nav-link+ .neon-nav-link:before{display:none}
-#mainHeader.neon-nav .neon-mobile-menu{background:#151619e8;border-top-color:#ffffff08;border-radius:0 0 32px 32px}
-#mainHeader.neon-nav .neon-mobile-menu nav{background:#0d0e10;border:4px solid #ffffff04;border-radius:24px;box-shadow:inset 0 3px 8px #0009}
-@media(max-width:900px){#mainHeader.neon-nav,.news-header.neon-nav{border-radius:26px}.nav-liquid-slider{border-radius:28px}#mainHeader.neon-nav .neon-mobile-menu{border-radius:0 0 26px 26px}.news-header.neon-nav nav.neon-menu{border-radius:24px}}
+.neon-nav-link .nav-icon-well{width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#78868c17,#26303312);border:1px solid #ffffff17;box-shadow:inset 0 1px 0 #ffffff0d,0 2px 5px #0002}
+.neon-nav-link .nav-icon-well svg{animation:none;filter:none;stroke-width:1.5}
+.neon-nav-link.is-previewed .nav-icon-well{background:linear-gradient(145deg,#fbfcfc,#d9dee0);border-color:#ffffff99;box-shadow:inset 0 1px 0 #fff,0 3px 8px #0003;transform:translateY(0);color:#171d20}
+.neon-nav-link.is-previewed .nav-icon-well svg,.neon-nav-link.is-active svg{filter:none}
+.neon-news-badge{color:#b9c1c4;background:#ffffff06;border-color:#ffffff12;font-size:5px;letter-spacing:.6px}
+#mainHeader.neon-nav #langBtn,#mainHeader.neon-nav #currencyBtn{background:#ffffff05;border-color:#ffffff14;border-radius:30px;font-weight:400;color:#d3dadc;padding:9px 11px;box-shadow:inset 0 1px 0 #ffffff08}
+#mainHeader.neon-nav #searchBtn,#mainHeader.neon-nav #mobileMenuBtn{border:1px solid #ffffff12;border-radius:50%;background:#ffffff05;color:#dbe1e3;box-shadow:inset 0 1px 0 #ffffff0c}
+#mainHeader.neon-nav #searchBtn{padding:9px}
+#mainHeader.neon-nav [onclick="openAuthModal('register')"],.neon-exchange{background:linear-gradient(145deg,#fafbfb,#dfe4e5);color:#171d20;border:1px solid #ffffff90;box-shadow:inset 0 1px 0 #fff,0 3px 8px #0002;font-weight:500}
+#mainHeader.neon-nav [onclick="openAuthModal('login')"]{color:#c7d0d2}
+#mainHeader.neon-nav #langDropdown,#mainHeader.neon-nav #currencyDropdown{background:linear-gradient(145deg,#30393bf2,#1d2528ed);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-color:#ffffff20;border-radius:20px;box-shadow:inset 0 1px 0 #ffffff12,0 12px 24px #0004;padding:6px}
+#mainHeader.neon-nav #langDropdown button,#mainHeader.neon-nav #currencyDropdown button{border-radius:14px;font-weight:400}
+#mainHeader.neon-nav #langDropdown button:hover,#mainHeader.neon-nav #currencyDropdown button:hover{background:#ffffff0c}
+#mainHeader.neon-nav .neon-mobile-menu{background:linear-gradient(145deg,#303a3d38,#1b242638);border-top-color:#ffffff0a;border-radius:0 0 36px 36px}
+#mainHeader.neon-nav .neon-mobile-menu nav{background:#15202320;border:0;border-radius:26px;box-shadow:none}
+#mainHeader.neon-nav .neon-mobile-menu .neon-nav-link{border-color:transparent;border-radius:26px}
+.mobile-auth>button{border-color:#ffffff18;background:#ffffff04;color:#cdd5d7}
+@media(max-width:900px){#mainHeader.neon-nav,.news-header.neon-nav{border-radius:28px}.nav-liquid-slider{border-radius:26px}.neon-nav-link .nav-icon-well{width:37px;height:37px}#mainHeader.neon-nav .neon-mobile-menu{border-radius:0 0 28px 28px}.news-header.neon-nav nav.neon-menu{border-radius:28px}}
+@media(max-width:360px){#mainHeader.neon-nav #langBtn{padding:7px}}
 @media(prefers-reduced-motion:reduce){.slider-ready .nav-liquid-slider{transition:none!important}}
