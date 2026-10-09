@@ -37,3 +37,30 @@
 .neon-nav .neon-nav-shell{width:100%}
 @media(max-width:900px){.news-header.neon-nav nav.neon-menu{width:100%;min-width:0;flex-shrink:1;flex-basis:100%}}
 @media(max-width:360px){.neon-brand img{width:96px}.neon-brand>span{font-size:6px;letter-spacing:1px}#mainHeader.neon-nav #currentLangLabel{display:none}#mainHeader.neon-nav #currentLangFlag{display:inline}#mainHeader.neon-nav #langBtn{gap:4px}}
+/* Orange liquid glass frame with travelling perimeter light. */
+@property --nav-light-angle{syntax:'<angle>';inherits:false;initial-value:0deg}
+#mainHeader.neon-nav,.news-header.neon-nav{top:12px!important;width:calc(100% - 28px);max-width:1440px;margin:12px auto 0;border-radius:24px;border:1px solid #ffbc7b33!important;background:linear-gradient(125deg,#82360f24,#161315bb 30%,#0d0e12bf 68%,#ff7a2817)!important;backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);box-shadow:inset 0 1px 0 #ffe4cb20,inset 0 -1px 0 #ffb4740c,0 16px 42px #0008,0 0 30px #ff60100a}
+.neon-nav:before,.neon-nav:after{inset:-1px;left:-1px;top:-1px;bottom:-1px;width:auto;height:auto;border-radius:inherit;padding:1px;opacity:1;z-index:0;box-shadow:none;filter:none;pointer-events:none;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;background:conic-gradient(from var(--nav-light-angle),transparent 0deg,#ff733533 35deg,#ffac70aa 60deg,#fff0dccc 72deg,#ff8e4a88 84deg,transparent 112deg,transparent 360deg);animation:navPerimeterLight 9s linear infinite}
+.neon-nav:after{padding:2px;background:conic-gradient(from var(--nav-light-angle),transparent 0deg,transparent 200deg,#ff692d44 226deg,#ffcf9d99 240deg,transparent 260deg,transparent 360deg);animation-duration:13s}
+.neon-nav .neon-nav-shell{position:relative;z-index:1}
+#mainHeader.neon-nav .neon-mobile-menu{position:relative;z-index:1;border-radius:0 0 24px 24px;background:#141012dd}
+@keyframes navPerimeterLight{to{--nav-light-angle:360deg}}
+/* A single raised orange glass surface slides behind the hovered link. */
+.neon-nav nav{position:relative;isolation:isolate}
+.nav-liquid-slider{position:absolute;left:0;top:0;pointer-events:none;border:1px solid #ffa66142;border-radius:18px;background:radial-gradient(ellipse at 25% 0%,#ffe0b126,transparent 65%),linear-gradient(145deg,#ff8d3722,#ff64121a 55%,#32190f66);box-shadow:inset 0 1px 0 #ffe4c735,inset 0 -1px 0 #ff94481a,0 4px 16px #0003,0 0 22px #ff6a2b0e;backdrop-filter:blur(12px) saturate(160%);-webkit-backdrop-filter:blur(12px) saturate(160%);opacity:0;z-index:-1;will-change:transform}
+.slider-ready .nav-liquid-slider{opacity:1;transition:transform .42s cubic-bezier(.22,1,.36,1),width .42s cubic-bezier(.22,1,.36,1),height .42s cubic-bezier(.22,1,.36,1),opacity .2s}
+#mainHeader.neon-nav nav .neon-nav-link,.neon-nav nav .neon-nav-link{gap:9px;background:transparent!important;transition:color .25s}
+.neon-nav-link.is-active:after{display:none}
+#mainHeader.neon-nav nav .neon-nav-link.is-previewed,.neon-nav nav .neon-nav-link.is-previewed{color:#ffc18c}
+.neon-nav-link+ .neon-nav-link:before{opacity:.55}
+/* Matte black neumorphic icon wells: soft raised edges, embossed symbols. */
+.neon-nav-link .nav-icon-well{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#232326,#0f1013);border:1px solid #ffffff08;box-shadow:5px 5px 11px #0009,-3px -3px 9px #49403822,inset 0 1px 0 #ffffff0b,inset 0 -1px 0 #0008;transition:transform .3s,box-shadow .3s,border-color .3s}
+.neon-nav-link .nav-icon-well svg{width:20px;height:20px;stroke-width:1.65;filter:drop-shadow(0 1px 0 #000);animation:navIconBreathe 5s ease-in-out infinite;animation-delay:var(--icon-delay)}
+.neon-nav-link.is-previewed .nav-icon-well{border-color:#ffad6740;transform:translateY(-2px);box-shadow:5px 6px 12px #000a,-3px -3px 9px #74513922,inset 0 1px 0 #ffddad12,0 0 16px #ff692d10}
+.neon-nav-link.is-previewed .nav-icon-well svg{filter:drop-shadow(0 0 4px #ff8b3555)}
+.neon-nav-link:active .nav-icon-well{transform:translateY(1px) scale(.96);box-shadow:inset 3px 3px 7px #0009,inset -2px -2px 6px #ffffff08}
+@keyframes navIconBreathe{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-1.5px) rotate(-3deg)}}
+.neon-news-badge{z-index:2;top:5px;right:4px}
+@media(max-width:900px){#mainHeader.neon-nav,.news-header.neon-nav{top:8px!important;width:calc(100% - 20px);margin-top:8px;border-radius:19px}.neon-nav .neon-nav-shell{padding-left:14px;padding-right:14px}.neon-nav-link .nav-icon-well{width:37px;height:37px;border-radius:11px}#mainHeader.neon-nav .neon-mobile-menu{border-radius:0 0 19px 19px}.nav-liquid-slider{border-radius:13px}}
+@media(max-width:360px){#mainHeader.neon-nav .neon-nav-shell{padding-left:10px;padding-right:10px;gap:4px}.neon-brand img{width:90px}}
+@media(prefers-reduced-motion:reduce){.neon-nav:before,.neon-nav:after,.neon-nav-link .nav-icon-well svg{animation:none!important}.slider-ready .nav-liquid-slider,.neon-nav-link .nav-icon-well{transition:none!important;will-change:auto}}
