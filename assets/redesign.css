@@ -129,3 +129,15 @@ footer{background:#080808!important}
 .exchange-end{fill:#221a16;stroke:#ff692d55;stroke-width:1}
 .exchange-simulation text{fill:#ff9c5f;font:16px Arial,sans-serif}
 @media(prefers-reduced-motion:reduce){.balance-graph .simulation-line{animation:none}}
+/* Official About Us summary, directly after the hero trust badges. */
+#about-bitqik{padding:25px 24px 75px;scroll-margin-top:30px}
+.about-wrap{max-width:1036px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr;gap:40px 55px;padding:40px;border:1px solid #ffffff14;border-radius:24px;background:radial-gradient(ellipse at 0 0,#ff6a2b12,transparent 60%),linear-gradient(135deg,#191919ee,#101010f5)}
+.about-eyebrow{display:flex;gap:15px;align-items:center;color:#ff9866;font-size:10px;letter-spacing:1.5px;font-weight:600}.about-eyebrow>span{padding:3px 7px;border:1px solid #ff692d33;border-radius:5px;font-size:8px;letter-spacing:1px}
+#about-bitqik h2{font-size:32px;font-weight:500;letter-spacing:-.5px;line-height:1.5;margin:15px 0}
+#about-bitqik p{font-size:13px;line-height:1.95;color:#a5a5a5;margin:0 0 15px}
+#about-bitqik .about-lead{color:#d1d1d1;font-size:14px}
+.about-source{display:inline-flex;gap:16px;align-items:center;color:#ff9e6d;border-bottom:1px solid #ff692d44;padding:4px 0 8px;font-size:12px;margin-top:5px}.about-source:hover{color:white}
+.about-purpose{display:flex;flex-direction:column;gap:15px}.about-purpose article{padding:22px 24px;border:1px solid #ffffff0f;border-radius:15px;background:#ffffff03}.about-number{color:#e99264;font-size:9px;letter-spacing:1.3px}
+#about-bitqik h3{font-size:19px;font-weight:500;margin:8px 0}#about-bitqik .about-purpose p{margin:0;font-size:12px;line-height:1.9}
+.about-values{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:10px;border-top:1px solid #ffffff0d;padding-top:24px;font-size:11px}.about-values>span{border:1px solid #ffffff12;border-radius:20px;padding:6px 12px;color:#aaa}.about-values>.about-values-label{border:0;padding-left:0;padding-right:10px;color:#eee}
+@media(max-width:767px){#about-bitqik{padding:10px 16px 45px}.about-wrap{grid-template-columns:1fr;gap:25px;padding:25px}#about-bitqik h2{font-size:27px}.about-purpose article{padding:20px}.about-values{gap:7px}.about-values>span{font-size:10px;padding:5px 10px}.about-values>.about-values-label{width:100%;margin-bottom:3px}}

@@ -31,6 +31,20 @@ const coinsData = [
 // Multilingual Dictionary
 const i18nDict = {
   lo: {
+    about_title: "ຮູ້ຈັກ Bitqik",
+    about_intro: "Bitqik ເລີ່ມຕົ້ນໃນປີ 2022 ເປັນສະຖາບັນແຫ່ງທຳອິດໃນລາວທີ່ໄດ້ຮັບອະນຸຍາດ ແລະກຳກັບດູແລເພື່ອໃຫ້ບໍລິການນາຍໜ້າ ແລະຊື້ຂາຍຊັບສິນດິຈິຕອນ.",
+    about_group: "ໃນຖານະບໍລິສັດໃນເຄືອ SMG, ພວກເຮົາໃຫ້ບໍລິການຊື້, ຂາຍ ແລະເກັບຮັກສາຄຣິບໂຕ ສຳລັບບຸກຄົນ ແລະສະຖາບັນ ພ້ອມມຸ່ງໃຫ້ທຸກຄົນເຂົ້າເຖິງການສົ່ງ ແລະຮັບຄຣິບໂຕໄດ້ງ່າຍ ແລະປອດໄພ.",
+    about_more: "ອ່ານເພີ່ມກ່ຽວກັບ Bitqik",
+    about_vision_title: "ວິໄສທັດ",
+    about_vision: "ສ້າງລະບົບການເງິນທີ່ເປີດກວ້າງ ເພື່ອສົ່ງເສີມນະວັດຕະກຳ, ປະສິດທິພາບ ແລະໂອກາດທີ່ເທົ່າທຽມ.",
+    about_mission_title: "ພາລະກິດ",
+    about_mission: "ເຮັດໃຫ້ລະບົບການເງິນມີປະສິດທິພາບ, ຄ່າໃຊ້ຈ່າຍທີ່ເຂົ້າເຖິງໄດ້ ແລະປອດໄພ ສຳລັບທຸກຄົນ ໃນທຸກບ່ອນ.",
+    about_values_title: "ຄຸນຄ່າຂອງເຮົາ",
+    about_value_customer: "ລູກຄ້າເປັນສູນກາງ",
+    about_value_team: "ຮ່ວມມືເປັນທີມ",
+    about_value_accountability: "ຮັບຜິດຊອບ",
+    about_value_results: "ມຸ່ງເນັ້ນຜົນສຳເລັດ",
+
     license_badge: "Bank of Laos Licensed",
     ticker_promo: "🎉 ໂປຣໂມຊັ່ນ: ຝາກເງິນກີບຜ່ານ BCEL One ຟຣີຄ່າທຳນຽມ 0% ຕະຫຼອດ 24 ຊົ່ວໂມງ!",
     nav_about: "ກ່ຽວກັບພວກເຮົາ",
@@ -167,6 +181,20 @@ const i18nDict = {
     final_subtitle: "ເຂົ້າຮ່ວມກັບ Bitqik ມື້ນີ້ ແລະ ສຳຜັດກັບປະສົບການການເທຣດຊັບສິນດິຈິຕອນທີ່ງ່າຍດາຍ, ປອດໄພ ແລະ ວ່ອງໄວທີ່ສຸດ."
   },
   en: {
+    about_title: "About Bitqik",
+    about_intro: "Founded in 2022, Bitqik is the first licensed and regulated institution in Laos to offer brokerage and trading in cryptocurrencies and digital assets.",
+    about_group: "As an SMG subsidiary, we serve individuals and institutions with crypto buying, selling and storage, and aim to make sending and receiving crypto simple and secure for everyone.",
+    about_more: "More about Bitqik",
+    about_vision_title: "Our vision",
+    about_vision: "An open financial system that advances innovation, efficiency and equal opportunity.",
+    about_mission_title: "Our mission",
+    about_mission: "More efficient, affordable and secure finance for everyone, everywhere.",
+    about_values_title: "Our values",
+    about_value_customer: "Customer first",
+    about_value_team: "Teamwork",
+    about_value_accountability: "Accountability",
+    about_value_results: "Focus on results",
+
     license_badge: "Bank of Laos Licensed",
     ticker_promo: "🎉 Promo: 0% fee on LAK deposits via BCEL One 24/7!",
     nav_about: "About Us",
@@ -303,6 +331,20 @@ const i18nDict = {
     final_subtitle: "Join Bitqik today and experience the simplest, safest, and most rewarding digital asset platform in Laos."
   },
   th: {
+    about_title: "รู้จัก Bitqik",
+    about_intro: "Bitqik เริ่มต้นในปี 2022 เป็นสถาบันแห่งแรกในลาวที่ได้รับอนุญาตและอยู่ภายใต้การกำกับดูแลเพื่อให้บริการนายหน้าและซื้อขายคริปโตเคอร์เรนซีและสินทรัพย์ดิจิทัล",
+    about_group: "ในฐานะบริษัทในเครือ SMG เราให้บริการซื้อ ขาย และเก็บรักษาคริปโตสำหรับบุคคลและสถาบัน พร้อมมุ่งให้ทุกคนส่งและรับคริปโตได้ง่ายและปลอดภัย",
+    about_more: "อ่านเพิ่มเติมเกี่ยวกับ Bitqik",
+    about_vision_title: "วิสัยทัศน์",
+    about_vision: "สร้างระบบการเงินที่เปิดกว้าง เพื่อส่งเสริมนวัตกรรม ประสิทธิภาพ และโอกาสที่เท่าเทียม",
+    about_mission_title: "พันธกิจ",
+    about_mission: "ทำให้ระบบการเงินมีประสิทธิภาพ เข้าถึงได้ในราคาที่เหมาะสม และปลอดภัยสำหรับทุกคน ทุกที่",
+    about_values_title: "ค่านิยมของเรา",
+    about_value_customer: "ลูกค้าเป็นศูนย์กลาง",
+    about_value_team: "ทำงานเป็นทีม",
+    about_value_accountability: "ความรับผิดชอบ",
+    about_value_results: "มุ่งเน้นผลสำเร็จ",
+
     license_badge: "Bank of Laos Licensed",
     ticker_promo: "🎉 โปรโมชั่น: ฝากเงินผ่าน BCEL One ฟรีค่าธรรมเนียม 0% ตลอด 24 ชม.!",
     nav_about: "เกี่ยวกับเรา",
