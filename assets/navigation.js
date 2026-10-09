@@ -32,7 +32,7 @@
       if(!menu.getClientRects().length)return;
       const rect=target.getBoundingClientRect(),parent=menu.getBoundingClientRect();
       slider.style.width=`${rect.width-6}px`;slider.style.height=`${rect.height-8}px`;
-      slider.style.transform=`translate3d(${rect.left-parent.left+menu.scrollLeft+3}px,${rect.top-parent.top+menu.scrollTop+4}px,0)`;
+      slider.style.transform=`translate3d(${rect.left-parent.left-menu.clientLeft+menu.scrollLeft+3}px,${rect.top-parent.top-menu.clientTop+menu.scrollTop+4}px,0)`;
       links.forEach(link=>link.classList.toggle('is-previewed',link===target));
       if(!menu.classList.contains('slider-ready'))requestAnimationFrame(()=>menu.classList.add('slider-ready'));
     }
