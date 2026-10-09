@@ -31,6 +31,7 @@ const coinsData = [
 // Multilingual Dictionary
 const i18nDict = {
   lo: {
+    nav_home: "ໜ້າຫຼັກ",
     about_title: "ຮູ້ຈັກ Bitqik",
     about_intro: "Bitqik ເລີ່ມຕົ້ນໃນປີ 2022 ເປັນສະຖາບັນແຫ່ງທຳອິດໃນລາວທີ່ໄດ້ຮັບອະນຸຍາດ ແລະກຳກັບດູແລເພື່ອໃຫ້ບໍລິການນາຍໜ້າ ແລະຊື້ຂາຍຊັບສິນດິຈິຕອນ.",
     about_group: "ໃນຖານະບໍລິສັດໃນເຄືອ SMG, ພວກເຮົາໃຫ້ບໍລິການຊື້, ຂາຍ ແລະເກັບຮັກສາຄຣິບໂຕ ສຳລັບບຸກຄົນ ແລະສະຖາບັນ ພ້ອມມຸ່ງໃຫ້ທຸກຄົນເຂົ້າເຖິງການສົ່ງ ແລະຮັບຄຣິບໂຕໄດ້ງ່າຍ ແລະປອດໄພ.",
@@ -181,6 +182,7 @@ const i18nDict = {
     final_subtitle: "ເຂົ້າຮ່ວມກັບ Bitqik ມື້ນີ້ ແລະ ສຳຜັດກັບປະສົບການການເທຣດຊັບສິນດິຈິຕອນທີ່ງ່າຍດາຍ, ປອດໄພ ແລະ ວ່ອງໄວທີ່ສຸດ."
   },
   en: {
+    nav_home: "Home",
     about_title: "About Bitqik",
     about_intro: "Founded in 2022, Bitqik is the first licensed and regulated institution in Laos to offer brokerage and trading in cryptocurrencies and digital assets.",
     about_group: "As an SMG subsidiary, we serve individuals and institutions with crypto buying, selling and storage, and aim to make sending and receiving crypto simple and secure for everyone.",
@@ -331,6 +333,7 @@ const i18nDict = {
     final_subtitle: "Join Bitqik today and experience the simplest, safest, and most rewarding digital asset platform in Laos."
   },
   th: {
+    nav_home: "หน้าหลัก",
     about_title: "รู้จัก Bitqik",
     about_intro: "Bitqik เริ่มต้นในปี 2022 เป็นสถาบันแห่งแรกในลาวที่ได้รับอนุญาตและอยู่ภายใต้การกำกับดูแลเพื่อให้บริการนายหน้าและซื้อขายคริปโตเคอร์เรนซีและสินทรัพย์ดิจิทัล",
     about_group: "ในฐานะบริษัทในเครือ SMG เราให้บริการซื้อ ขาย และเก็บรักษาคริปโตสำหรับบุคคลและสถาบัน พร้อมมุ่งให้ทุกคนส่งและรับคริปโตได้ง่ายและปลอดภัย",

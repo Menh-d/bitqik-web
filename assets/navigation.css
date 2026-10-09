@@ -1,0 +1,39 @@
+/* Reference-inspired black console navigation with orange light seams. */
+#mainHeader.neon-nav,.news-header.neon-nav{position:sticky!important;top:0;z-index:40;max-width:none;width:100%;margin:0;padding:0!important;background:linear-gradient(180deg,#0b0c0ef5,#070809f5)!important;border-top:1px solid #ff78364a!important;border-bottom:1px solid #ff78363b!important;backdrop-filter:blur(20px);box-shadow:0 8px 35px #0006,inset 0 1px #ffffff04;isolation:isolate}
+.neon-nav:before,.neon-nav:after{content:'';position:absolute;left:17%;width:35%;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,#ffb081,#ff6a2b,transparent);box-shadow:0 0 15px 2px #ff5e2c50;z-index:-1}.neon-nav:before{top:0}.neon-nav:after{bottom:0;left:28%;width:28%;opacity:.6}
+.neon-nav .neon-nav-shell{max-width:1320px;margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:108px}
+.neon-nav .neon-brand{display:flex;flex-direction:column;gap:10px;flex-shrink:0;padding-right:24px;border-right:1px solid #ffffff0c;text-decoration:none}
+.neon-brand img{display:block;width:132px;height:auto;object-fit:contain}.neon-brand>span{font:8px Inter,Arial,sans-serif;letter-spacing:1.8px;color:#808083}
+#mainHeader.neon-nav nav.neon-menu,.neon-nav nav.neon-menu{display:flex;border:0;background:none;box-shadow:none;border-radius:0;padding:0;gap:0;align-items:stretch;flex:1;justify-content:center}
+#mainHeader.neon-nav nav .neon-nav-link,.neon-nav nav .neon-nav-link{display:flex!important;position:relative;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:88px;min-width:74px;padding:12px 14px!important;border-radius:0;background:transparent;border:0;box-shadow:none;font-size:10px;font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#909092;white-space:nowrap;text-decoration:none;transition:color .2s,background .2s}
+.neon-nav-link+ .neon-nav-link:before{content:'';position:absolute;left:0;top:22%;height:56%;width:1px;background:linear-gradient(transparent,#ffffff14,transparent)}
+.neon-nav-link svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+#mainHeader.neon-nav nav .neon-nav-link:hover,.neon-nav nav .neon-nav-link:hover{color:#e1b59b;background:radial-gradient(ellipse at 50% 0,#ff692d0c,transparent 75%)}
+#mainHeader.neon-nav nav .neon-nav-link.is-active,.neon-nav nav .neon-nav-link.is-active{color:#ff934d;background:radial-gradient(ellipse at 50% 0,#ff692d18,transparent 80%)}
+.neon-nav-link.is-active svg{filter:drop-shadow(0 0 6px #ff692d88)}
+.neon-nav-link.is-active:after{content:'';position:absolute;left:28%;right:28%;bottom:3px;height:1px;background:#ffa35e;box-shadow:0 0 12px 2px #ff692d66}
+.neon-news-badge{position:absolute;top:8px;right:7px;background:#ff692d12;border:1px solid #ff692d40;color:#ff955a;font:6px Inter,Arial,sans-serif;letter-spacing:1px;border-radius:3px;padding:2px 3px}
+.neon-nav a:focus-visible,.neon-nav button:focus-visible{outline:2px solid #ff9459;outline-offset:3px}
+#mainHeader.neon-nav .nav-actions{display:flex;gap:10px;flex-shrink:0}
+#mainHeader.neon-nav #langBtn,#mainHeader.neon-nav #currencyBtn{font-size:10px;border-radius:8px;background:#ffffff03;border-color:#ffffff12;padding:7px 9px}
+#mainHeader.neon-nav #langDropdown,#mainHeader.neon-nav #currencyDropdown{background:#111114;border:1px solid #ff692d33;border-radius:12px;top:100%;margin-top:14px;z-index:50}
+#mainHeader.neon-nav [onclick="openAuthModal('register')"],.neon-exchange{border:1px solid #ff985673;border-radius:30px;background:linear-gradient(135deg,#ff692d14,#ff692d05);box-shadow:inset 0 0 15px #ff692d08,0 0 15px #ff692d12;color:#ffab7b;font-size:11px;padding:12px 17px;white-space:nowrap}
+#mainHeader.neon-nav [onclick="openAuthModal('login')"]{font-size:11px;color:#aaa;padding:9px 7px}
+#mainHeader.neon-nav #searchBtn{padding:5px}#mainHeader.neon-nav #searchBtn svg{width:17px;height:17px}
+#mainHeader.neon-nav #viewModeToggle,#mainHeader.neon-nav #themeToggle,#mainHeader.neon-nav .nav-actions>a[href="#market"]{display:none!important}
+#mainHeader.neon-nav #mobileMenuBtn{display:none}
+#mainHeader.neon-nav .neon-mobile-menu{border-top:1px solid #ff692d20;background:#0b0b0dfc;padding:12px 16px 18px}
+#mainHeader.neon-nav .neon-mobile-menu.hidden{display:none!important}
+#mainHeader.neon-nav .neon-mobile-menu nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:0;background:none;border-radius:0;padding:0;gap:6px}
+#mainHeader.neon-nav .neon-mobile-menu .neon-nav-link{min-height:82px;min-width:0;border:1px solid #ffffff08;border-radius:8px}
+.mobile-auth{display:flex;gap:12px;margin-top:12px}.mobile-auth>button{flex:1;padding:10px;border:1px solid #ffffff12;border-radius:20px}
+#hero,#about-bitqik,#products,#market,#learn{scroll-margin-top:125px}
+@media(min-width:901px){#mainHeader.neon-nav .neon-mobile-menu{display:none!important}}
+@media(max-width:1200px){.neon-nav .neon-nav-shell{gap:12px;padding:0 20px}.neon-nav .neon-brand{padding-right:16px}.neon-brand img{width:118px}.neon-brand>span{font-size:7px;letter-spacing:1.3px}#mainHeader.neon-nav nav .neon-nav-link,.neon-nav nav .neon-nav-link{min-width:63px;padding:12px 10px!important;font-size:9px}#mainHeader.neon-nav #searchBtn,#mainHeader.neon-nav #currencyBtn{display:none}#mainHeader.neon-nav .nav-actions{gap:7px}}
+@media(max-width:900px){.neon-nav .neon-nav-shell{min-height:82px;padding:12px 20px;gap:12px}.neon-nav .neon-brand{border:0;padding:0;gap:6px}.neon-brand img{width:112px}#mainHeader.neon-nav nav.neon-menu{display:none}#mainHeader.neon-nav #mobileMenuBtn{display:block;padding:8px}#mainHeader.neon-nav #langBtn{display:flex}#mainHeader.neon-nav .nav-actions>[onclick="openAuthModal('login')"]{display:none}#mainHeader.neon-nav .nav-actions>[onclick="openAuthModal('register')"]{padding:10px 13px;font-size:10px}#hero,#about-bitqik,#products,#market,#learn{scroll-margin-top:95px}.news-header.neon-nav .neon-nav-shell{flex-wrap:wrap}.news-header.neon-nav nav.neon-menu{order:3;flex-basis:100%;overflow-x:auto;justify-content:flex-start}.news-header.neon-nav nav .neon-nav-link{flex:1;min-height:76px;min-width:70px}.news-header.neon-nav .neon-exchange{font-size:10px;padding:9px 14px}}
+@media(max-width:400px){.neon-nav .neon-nav-shell{padding:12px 14px;gap:8px}#mainHeader.neon-nav .nav-actions{gap:4px}#mainHeader.neon-nav #langBtn{padding:6px;font-size:9px}#mainHeader.neon-nav #currentLangFlag{display:none}}
+@media(prefers-reduced-motion:reduce){.neon-nav-link{transition:none!important}}
+#mainHeader.neon-nav,.news-header.neon-nav{display:block}
+.neon-nav .neon-nav-shell{width:100%}
+@media(max-width:900px){.news-header.neon-nav nav.neon-menu{width:100%;min-width:0;flex-shrink:1;flex-basis:100%}}
+@media(max-width:360px){.neon-brand img{width:96px}.neon-brand>span{font-size:6px;letter-spacing:1px}#mainHeader.neon-nav #currentLangLabel{display:none}#mainHeader.neon-nav #currentLangFlag{display:inline}#mainHeader.neon-nav #langBtn{gap:4px}}

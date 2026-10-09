@@ -12,10 +12,5 @@ const trust = intro.lastElementChild;
 if (trust !== stage && trust.id !== 'hero-swap') { trust.classList.add('hero-trust'); heroGrid.append(trust); }
 const styleLink = document.createElement('link');styleLink.rel='stylesheet';styleLink.href='./assets/redesign.css';document.head.append(styleLink);
 
-// Dedicated news destination, visible in desktop and mobile navigation.
-const newsNav = document.createElement('a');
-newsNav.href='./news.html';newsNav.className='news-nav-highlight';newsNav.innerHTML='<span class="news-nav-dot"></span> News <span class="news-nav-badge">NEW</span>';
-document.querySelector('#mainHeader nav').append(newsNav);
-const mobileNews = newsNav.cloneNode(true);document.getElementById('mobileDrawer').prepend(mobileNews);
 const newsSectionTitle = document.querySelector('#announcements h2');
 const newsMore = document.createElement('a');newsMore.href='./news.html';newsMore.className='news-section-link';newsMore.textContent='ເບິ່ງຂ່າວທັງໝົດ / All News ↗';newsSectionTitle.parentElement.append(newsMore);
