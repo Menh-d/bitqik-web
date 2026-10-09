@@ -1,0 +1,138 @@
+/* ==============================================================
+   Bitqik Ultra-Modern Landing Page Custom Styles
+   ============================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080a0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c2438;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6600;
+  }
+}
+
+/* Glassmorphism accents */
+.glass-panel {
+  background: rgba(15, 20, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 102, 0, 0.3);
+}
+
+/* Glowing Neon Elements */
+.glow-brand {
+  box-shadow: 0 0 40px -10px rgba(255, 102, 0, 0.4);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 35px -10px rgba(14, 203, 129, 0.35);
+}
+
+/* Price Up / Down Blip Flash Animations */
+@keyframes flashGreen {
+  0% { background-color: rgba(14, 203, 129, 0.4); color: #fff; }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background-color: rgba(246, 70, 93, 0.4); color: #fff; }
+  100% { background-color: transparent; }
+}
+
+.price-flash-up {
+  animation: flashGreen 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
+}
+
+.price-flash-down {
+  animation: flashRed 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
+}
+
+/* Shimmer badge */
+.shimmer-text {
+  background: linear-gradient(90deg, #fff 0%, #ff8c00 50%, #fff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Step Card Active Glow */
+.step-card.active {
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.08) 0%, rgba(15, 20, 32, 0.95) 100%);
+  border-color: #ff6600 !important;
+  box-shadow: 0 10px 30px -10px rgba(255, 102, 0, 0.25);
+}
+
+/* Light Mode Overrides */
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) #mainHeader {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) #why-us,
+html:not(.dark) #how-it-works,
+html:not(.dark) #learn,
+html:not(.dark) #faq {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) .bg-\[\#0f1420\],
+html:not(.dark) .bg-\[\#0b0e15\],
+html:not(.dark) .bg-\[\#080a0f\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-slate-300 {
+  color: #64748b !important;
+}
+
+html:not(.dark) footer {
+  background-color: #0b0f19 !important;
+  color: #94a3b8 !important;
+}
+
+html:not(.dark) footer .text-white {
+  color: #ffffff !important;
+}
+
+/* Sparkline canvas styling */
+.sparkline-canvas {
+  width: 90px;
+  height: 32px;
+  display: block;
+}

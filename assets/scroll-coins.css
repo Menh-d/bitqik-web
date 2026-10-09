@@ -1,0 +1,53 @@
+/* Decorative, scroll-controlled 3D coins. The middle remains clear for content. */
+.scroll-coin-scene{position:fixed;inset:0;z-index:25;pointer-events:none;overflow:hidden;contain:strict;mask-image:linear-gradient(90deg,#000 0%,#000 8%,#0009 13%,transparent 23%,transparent 77%,#0009 87%,#000 92%,#000 100%)}
+.scroll-coin-anchor{position:absolute;width:220px;height:220px;perspective:950px;opacity:.85;filter:drop-shadow(0 20px 25px #0008)}
+.coin-btc{left:-70px;top:20%;--metal-light:#ffd7a0;--metal:#ff8c32;--metal-dark:#8c3612;--emboss:#ffcf8b;--shadow:#823409}
+.coin-eth{right:-65px;top:12%;width:190px;height:190px;--metal-light:#eef0f6;--metal:#9fa7b4;--metal-dark:#353940;--emboss:#e9e9e7;--shadow:#373d48}
+.coin-usdt{right:-80px;top:68%;width:230px;height:230px;--metal-light:#d0e4c8;--metal:#6c9f8b;--metal-dark:#23483d;--emboss:#dbebd8;--shadow:#29483d}
+.scroll-coin{position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform}
+.coin-face,.coin-edge{position:absolute;inset:0;border-radius:50%}
+.coin-edge{background:repeating-conic-gradient(from 0deg,var(--metal-dark) 0deg 1deg,var(--metal) 1deg 2deg,var(--metal-light) 2deg 2.7deg,var(--metal-dark) 2.7deg 4deg);border:1px solid var(--metal-dark)}
+.coin-face{backface-visibility:hidden;background:linear-gradient(130deg,var(--metal-light),var(--metal) 35%,var(--metal-dark) 80%,var(--metal));border:2px solid var(--metal-light);box-shadow:inset 0 0 0 3px #0003,inset 0 0 0 5px #ffffff35,inset -8px -10px 22px #0003}
+.coin-front{transform:translateZ(12px)}.coin-back{transform:translateZ(-12px) rotateY(180deg)}
+.coin-rim{position:absolute;inset:9px;border:1px dashed #ffe9cd80;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;box-shadow:inset 0 0 0 3px #0001,inset 0 0 20px #ffffff12}
+.coin-face svg{width:64%;height:64%;fill:var(--emboss);filter:drop-shadow(1px 2px 0 var(--shadow)) drop-shadow(-1px -1px 0 #ffffff38)}
+.coin-inscription,.coin-engraving{position:absolute;left:0;right:0;text-align:center;font-family:Arial,sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;color:var(--emboss);text-shadow:0 1px var(--shadow)}
+.coin-inscription{top:13px}.coin-engraving{bottom:14px;font-size:6px;letter-spacing:2px}
+@media(min-width:1700px){.coin-btc{left:25px;width:250px;height:250px}.coin-eth{right:25px;width:230px;height:230px}.coin-usdt{right:0;width:255px;height:255px}}
+@media(max-width:1100px){.scroll-coin-scene{opacity:.6;mask-image:linear-gradient(90deg,#000,transparent 15%,transparent 85%,#000)}.coin-btc{left:-105px}.coin-eth{right:-110px}.coin-usdt{right:-135px}}
+@media(max-width:600px){.scroll-coin-scene{opacity:.45;mask-image:linear-gradient(90deg,#000,transparent 17%,transparent 83%,#000)}.scroll-coin-anchor{width:130px;height:130px}.coin-btc{left:-85px;top:23%}.coin-eth{right:-85px;top:12%;width:125px;height:125px}.coin-usdt{right:-85px;top:72%;width:140px;height:140px}.coin-inscription{font-size:6px;letter-spacing:1px;top:8px}.coin-engraving{font-size:4px;letter-spacing:.5px;bottom:8px}.coin-rim{inset:7px}}
+@media(prefers-reduced-motion:reduce){.scroll-coin{will-change:auto}}
+@media print{.scroll-coin-scene{display:none}}
+/* Black satin chromium: a restrained metal highlight and engraved faces. */
+.scroll-coin-anchor{--metal-light:#73777a;--metal:#282a2d;--metal-dark:#08090a;--emboss:#8d9295;--shadow:#030405;opacity:.95}
+.coin-face{background:radial-gradient(ellipse at 28% 18%,#73777a44,transparent 42%),linear-gradient(135deg,#4e5357 0%,#24272a 24%,#101214 56%,#1c1f22 78%,#44484c 100%);border-color:#686d71;box-shadow:inset 0 0 0 2px #0b0d0e,inset 0 0 0 4px #767b7f44,inset -10px -12px 25px #0008}
+.coin-rim{border-color:#858b8e66;box-shadow:inset 0 0 0 3px #0002,inset 0 0 20px #0003}
+.coin-face svg{filter:drop-shadow(1px 2px 0 #000) drop-shadow(-1px -1px 0 #b8bec133)}
+.coin-inscription,.coin-engraving{color:#8b9195;text-shadow:0 1px #000}
+/* Fixed circular coin marquee sits beneath the page content. */
+body{isolation:isolate}
+body>section{position:relative;z-index:1;background-color:transparent!important}
+body>footer{position:relative;z-index:1}
+.news-header{position:relative;z-index:2}
+body>main{position:relative;z-index:1}
+.crypto-orbit-background{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;contain:strict;background:radial-gradient(ellipse at 50% 35%,#ff642008,transparent 65%);mask-image:radial-gradient(ellipse at 50% 38%,#0004 0%,#0008 40%,#000 75%)}
+.crypto-orbit{position:absolute;left:50%;top:48%;border:1px solid #ff8e5510;border-radius:50%;animation:cryptoOrbit 100s linear infinite;will-change:transform}
+.orbit-track-0{width:650px;height:650px;margin:-325px 0 0 -325px;opacity:.25}
+.orbit-track-1{width:1100px;height:1100px;margin:-550px 0 0 -550px;animation-duration:150s;animation-direction:reverse;opacity:.4}
+.orbit-track-2{width:1570px;height:1570px;margin:-785px 0 0 -785px;animation-duration:200s;opacity:.55}
+.orbit-token-anchor{position:absolute;transform:translate(-50%,-50%);width:76px;height:76px;perspective:500px}
+.orbit-token{width:100%;height:100%;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(ellipse at 25% 20%,#60666c44,transparent 55%),linear-gradient(140deg,#292b2e,#0b0d0f 70%,#3b3f43);border:1px solid #72787d70;box-shadow:inset 0 0 0 3px #08090b,inset 0 0 0 4px #7e858a33,2px 4px 0 #050607,3px 5px 0 #51575b44,0 12px 25px #0008;animation:orbitTokenSpin 18s linear infinite;animation-delay:var(--token-delay);transform-style:preserve-3d}
+.orbit-token svg{width:56%;height:56%;fill:#a1a6aa;filter:drop-shadow(1px 2px 0 #000)}
+.orbit-token span{position:absolute;bottom:7px;font:6px Arial,sans-serif;letter-spacing:2px;color:#888e92}
+.orbit-track-1 .orbit-token-anchor{width:92px;height:92px}
+.orbit-track-2 .orbit-token-anchor{width:114px;height:114px}
+@keyframes cryptoOrbit{to{transform:rotate(360deg)}}
+@keyframes orbitTokenSpin{from{transform:rotateZ(var(--token-turn)) rotateY(0deg) rotateX(18deg)}to{transform:rotateZ(calc(var(--token-turn) + 360deg)) rotateY(360deg) rotateX(18deg)}}
+.orbit-paused .crypto-orbit,.orbit-paused .orbit-token{animation-play-state:paused}
+@media(max-width:600px){.orbit-track-0{width:360px;height:360px;margin:-180px 0 0 -180px}.orbit-track-1{width:650px;height:650px;margin:-325px 0 0 -325px}.orbit-track-2{width:980px;height:980px;margin:-490px 0 0 -490px}.orbit-token-anchor{width:48px;height:48px}.orbit-track-1 .orbit-token-anchor{width:64px;height:64px}.orbit-track-2 .orbit-token-anchor{width:78px;height:78px}.orbit-token span{font-size:5px;bottom:5px;letter-spacing:1px}.crypto-orbit-background{opacity:.65}}
+@media(prefers-reduced-motion:reduce){.crypto-orbit,.orbit-token{animation:none!important;will-change:auto}}
+@media print{.crypto-orbit-background{display:none}}
+/* Keep the orbital field visible beneath existing section theme rules. */
+html.dark body>section{background-color:transparent!important}
+.crypto-orbit-background{mask-image:radial-gradient(ellipse at 50% 38%,#0008 0%,#000b 40%,#000 75%)}
+.orbit-track-0{opacity:.4}.orbit-track-1{opacity:.55}.orbit-track-2{opacity:.65}
