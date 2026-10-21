@@ -1,0 +1,542 @@
+/* Hero 3-Card Stage Styling */
+.hero__image:has(.hero__cards-stage),
+.hero__image.cards-active {
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  height: auto !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+.hero__cards-stage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.hero__cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.hero__cards-col:first-child {
+  animation: showcaseFloat 7s ease-in-out infinite;
+}
+
+.hero__cards-col:last-child {
+  animation: showcaseFloat 7s ease-in-out 1.5s infinite;
+}
+
+@keyframes showcaseFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.showcase-card {
+  background: linear-gradient(135deg, rgba(30, 32, 38, 0.94) 0%, rgba(18, 19, 24, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 102, 0, 0.06) !important;
+  padding: 18px 20px !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  min-width: 0;
+  backdrop-filter: blur(16px);
+}
+
+.showcase-card:hover {
+  border-color: rgba(255, 102, 0, 0.45) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 102, 0, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+.showcase-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  inset: -50% 0;
+  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  animation: cardSheen 10s ease-in-out infinite;
+  transform: translateX(-160%) rotate(18deg);
+}
+
+@keyframes cardSheen {
+  0%, 100% { transform: translateX(-160%) rotate(18deg); }
+  40%, 60% { transform: translateX(260%) rotate(18deg); }
+}
+
+/* Header inside cards */
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.card-top-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: -0.01em;
+}
+
+.card-top-link {
+  font-size: 11px;
+  color: #ff7a1a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+.card-top-link:hover {
+  color: #ff9947;
+}
+
+/* Card 1: Market Preview */
+.market-preview {
+  padding: 16px 18px !important;
+}
+
+.preview-market-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-market-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 0;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.preview-market-row:last-child {
+  border-bottom: none;
+  padding-bottom: 4px;
+}
+
+.coin-symbol {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 102, 0, 0.12);
+  color: #ff7a1a;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 102, 0, 0.2);
+}
+
+.preview-coin-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 65px;
+}
+
+.preview-coin-info strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.preview-coin-info small {
+  font-size: 9px;
+  color: #8c8f99;
+  margin-top: 2px;
+}
+
+.preview-market-row svg {
+  width: 58px;
+  height: 22px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.preview-price-box {
+  text-align: right;
+  min-width: 72px;
+}
+
+.simulation-price {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  display: block;
+}
+
+.simulation-change {
+  font-size: 10px;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.simulation-change.down {
+  color: #f43f5e;
+}
+
+.preview-note {
+  font-size: 9px;
+  color: #717582;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.preview-note::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+/* Card 3: Express Swap */
+#hero-swap {
+  padding: 16px 18px !important;
+}
+
+.swap-fee-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 3px 8px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.swap-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.swap-input-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px 10px;
+  transition: border-color .2s;
+}
+
+.swap-input-box:focus-within {
+  border-color: rgba(255, 102, 0, 0.5);
+  background: rgba(255, 102, 0, 0.02);
+}
+
+.swap-input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #8c8f99;
+  margin-bottom: 4px;
+}
+
+.swap-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.swap-amount-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.swap-currency-pill {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ff9947;
+  background: rgba(255, 102, 0, 0.15);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  padding: 2px 7px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Exchange Simulation Circuit */
+.exchange-simulation {
+  border: 1px solid rgba(255, 102, 0, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 102, 0, 0.04);
+  margin: 10px 0;
+  padding: 6px 10px 2px;
+}
+
+.simulation-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8c8f99;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.simulation-caption > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.simulation-caption i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff7a1a;
+  box-shadow: 0 0 6px #ff7a1a;
+}
+
+.simulation-step {
+  color: #ff9947;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+
+.exchange-simulation svg {
+  display: block;
+  width: 100%;
+  height: 36px;
+}
+
+.exchange-track {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  fill: none;
+}
+
+.exchange-dashes {
+  stroke: rgba(255, 102, 0, 0.5);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+  fill: none;
+}
+
+.exchange-packet {
+  fill: #ff7a1a;
+  filter: drop-shadow(0 0 4px #ff6600);
+}
+
+.exchange-end {
+  fill: #1e2026;
+  stroke: rgba(255, 102, 0, 0.45);
+  stroke-width: 1.2;
+}
+
+.exchange-simulation text {
+  fill: #ff9947;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.swap-btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: linear-gradient(135deg, #ff6600 0%, #ea580c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(255, 102, 0, 0.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.swap-btn-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(255, 102, 0, 0.5);
+}
+
+/* Card 2: Live Crypto Chart / TradingView Widget */
+.tv-market-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 18px 20px !important;
+}
+
+.tv-badge {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  background: #ff6600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.tv-symbol-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.tv-symbol-tabs button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #8c8f99;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 0;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.tv-symbol-tabs button.selected,
+.tv-symbol-tabs button:hover {
+  color: #fff;
+  background: rgba(255, 102, 0, 0.25);
+  border: 1px solid rgba(255, 102, 0, 0.4);
+}
+
+.tv-chart-area {
+  flex: 1;
+  min-height: 250px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tv-chart-host {
+  width: 100%;
+  height: 100%;
+}
+
+.tv-chart-fallback {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.balance-caption {
+  font-size: 11px;
+  color: #8c8f99;
+  margin-bottom: 2px;
+}
+
+.balance-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.balance-value span {
+  font-size: 13px;
+  color: #8c8f99;
+  font-weight: 500;
+}
+
+.balance-graph {
+  width: 100%;
+  height: 120px;
+  margin: 10px 0;
+}
+
+.balance-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #8c8f99;
+}
+
+.tv-feed-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #717582;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tv-feed-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tv-feed-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.tv-quote-unit {
+  font-weight: 700;
+  color: #ff9947;
+}
+
+@media (max-width: 1120px) {
+  .hero__wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+  .hero__cards-stage {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+}

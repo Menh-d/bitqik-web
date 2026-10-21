@@ -1,0 +1,42 @@
+/* Proxima Nova Font Family */
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./fonts/ProximaNova-Light.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/18823/ProximaNova-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/ProximaNova-Regular.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/18823/ProximaNova-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/ProximaNova-Semibold.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/18823/ProximaNova-Semibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/ProximaNova-Bold.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/18823/ProximaNova-Bold.woff') format('woff');
+}
+
+:root {
+  --font-outfit: 'Proxima Nova', 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-tektur: 'Proxima Nova', 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+body, button, input, select, textarea, .title, .text, h1, h2, h3, h4, h5, h6, p, a, span, .btn, .nav-menu {
+  font-family: 'Proxima Nova', 'Proxima', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}

@@ -37,6 +37,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="icon" href="./wp-content/uploads/2025/07/favicon.ico" sizes="192x192" />
 <link rel="apple-touch-icon" href="./wp-content/uploads/2025/07/favicon.ico" />
 <meta name="msapplication-TileImage" content="./wp-content/uploads/2025/07/favicon.ico" />
+<link rel="stylesheet" href="./assets/proxima.css">
+<link rel="stylesheet" href="./assets/hero-cards.css">
 </head>
 
 <body class="home wp-singular page-template-default page page-id-2 wp-custom-logo wp-theme-portfolio-crypto page-sample-page template-">
@@ -123,70 +125,181 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                                     </div>
             </div>
 
-            <div class="hero__image">
-                <div class="hero__animation">
-                    
-                    <div class="hero__animation-back">
-                        <img src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-back.svg" alt="">
+                        <div class="hero__image cards-active">
+                <div class="hero__cards-stage trading-stage">
+                    <!-- Column 1: Market Preview + Express Swap -->
+                    <div class="hero__cards-col">
+                        <!-- Card 1: Live Markets Preview -->
+                        <article class="showcase-card market-preview">
+                            <div class="card-top-bar">
+                                <div class="card-top-title">
+                                    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 8px #10b981;"></span>
+                                    <span>Live Markets</span>
+                                </div>
+                                <a href="#chart" class="card-top-link">View all ↗</a>
+                            </div>
+
+                            <div class="preview-market-rows">
+                                <a href="#chart" class="preview-market-row">
+                                    <b class="coin-symbol">₿</b>
+                                    <div class="preview-coin-info">
+                                        <strong>Bitcoin</strong>
+                                        <small>BTC / USDT</small>
+                                    </div>
+                                    <svg viewBox="0 0 58 22" aria-hidden="true">
+                                        <path d="M0 18 L6 14 L12 16 L18 8 L24 12 L30 6 L36 10 L42 4 L48 9 L54 6 L58 2"/>
+                                    </svg>
+                                    <div class="preview-price-box">
+                                        <span class="simulation-price">$68,450.20</span>
+                                        <span class="simulation-change">+2.84%</span>
+                                    </div>
+                                </a>
+
+                                <a href="#chart" class="preview-market-row">
+                                    <b class="coin-symbol">Ξ</b>
+                                    <div class="preview-coin-info">
+                                        <strong>Ethereum</strong>
+                                        <small>ETH / USDT</small>
+                                    </div>
+                                    <svg viewBox="0 0 58 22" aria-hidden="true">
+                                        <path d="M0 16 L6 13 L12 18 L18 10 L24 14 L30 8 L36 10 L42 5 L48 7 L54 4 L58 3"/>
+                                    </svg>
+                                    <div class="preview-price-box">
+                                        <span class="simulation-price">$3,627.47</span>
+                                        <span class="simulation-change">+1.92%</span>
+                                    </div>
+                                </a>
+
+                                <a href="#chart" class="preview-market-row">
+                                    <b class="coin-symbol">◎</b>
+                                    <div class="preview-coin-info">
+                                        <strong>Solana</strong>
+                                        <small>SOL / USDT</small>
+                                    </div>
+                                    <svg viewBox="0 0 58 22" aria-hidden="true">
+                                        <path d="M0 19 L6 15 L12 16 L18 9 L24 11 L30 5 L36 8 L42 2 L48 6 L54 3 L58 1"/>
+                                    </svg>
+                                    <div class="preview-price-box">
+                                        <span class="simulation-price">$158.79</span>
+                                        <span class="simulation-change">+4.15%</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <p class="preview-note">Live Real-time Feed · Binance &amp; CoinGecko</p>
+                        </article>
+
+                        <!-- Card 3: Instant Express Swap & Simulation -->
+                        <div id="hero-swap" class="showcase-card">
+                            <div class="card-top-bar">
+                                <div class="card-top-title">
+                                    <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff6600;box-shadow:0 0 8px #ff6600;"></span>
+                                    <span>Express Swap</span>
+                                </div>
+                                <span class="swap-fee-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg>
+                                    0% Fee (BCEL)
+                                </span>
+                            </div>
+
+                            <div class="swap-inputs">
+                                <div class="swap-input-box">
+                                    <div class="swap-input-label">
+                                        <span>You Pay</span>
+                                        <span id="swapBalLabel">₭10,000,000</span>
+                                    </div>
+                                    <div class="swap-input-row">
+                                        <input id="swapPayInput" type="number" value="1000000" class="swap-amount-input" placeholder="0.00">
+                                        <div class="swap-currency-pill">LAK</div>
+                                    </div>
+                                </div>
+
+                                <div class="swap-input-box">
+                                    <div class="swap-input-label">
+                                        <span>You Get</span>
+                                        <span style="color:#ff7a1a">Est. Rate</span>
+                                    </div>
+                                    <div class="swap-input-row">
+                                        <input id="swapReceiveInput" type="text" value="0.00067" readonly class="swap-amount-input" placeholder="0.00">
+                                        <div class="swap-currency-pill">BTC</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="exchange-simulation">
+                                <div class="simulation-caption">
+                                    <span><i></i> Exchange Flow</span>
+                                    <span class="simulation-step">Matching</span>
+                                </div>
+                                <svg viewBox="0 0 300 44" aria-hidden="true">
+                                    <path class="exchange-track" d="M38 22H262"/>
+                                    <path class="exchange-dashes" d="M38 22H262"/>
+                                    <circle class="exchange-packet" r="3.5" cy="22"/>
+                                    <circle class="exchange-packet" r="3.5" cy="22"/>
+                                    <circle class="exchange-packet" r="3.5" cy="22"/>
+                                    <circle class="exchange-end" cx="22" cy="22" r="17"/>
+                                    <circle class="exchange-end" cx="278" cy="22" r="17"/>
+                                    <text x="22" y="27" text-anchor="middle">₭</text>
+                                    <text x="278" y="27" text-anchor="middle">₿</text>
+                                </svg>
+                            </div>
+
+                            <a href="https://exchange.bitqik.com" target="_blank" class="swap-btn-action">
+                                Quick Swap 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hero__animation-stripes">
-                        <div class="hero__animation-stripes-small">
-                            <img data-moving-orbit data-moving-center data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-small-1.svg" alt="">
-                            <img data-moving data-moving-center data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-small-2.svg" alt="">
-                            <img data-moving data-moving-center data-moving-right src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-small-3.svg" alt="">
-                        </div>
-                        <div class="hero__animation-stripes-medium">
-                            <img data-moving-orbit data-moving-center data-moving-right src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-medium-1.svg" alt="">
-                            <img data-moving data-moving-center data-moving-right src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-medium-2.svg" alt="">
-                            <img data-moving data-moving-center data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-medium-3.svg" alt="">
-                        </div>
-                        <div class="hero__animation-stripes-large">
-                            <img data-moving-orbit data-moving-center data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-large-1.svg" alt="">
-                            <img data-moving data-moving-center data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-large-2.svg" alt="">
-                            <img data-moving data-moving-center data-moving-right src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-stripes-large-3.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="hero__animation-holder">
-                        <div class="hero__animation-holder-plate">
-                            <img src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-plate.svg" alt="">
-                        </div>
-                        <div class="hero__animation-holder-symbol">
-                            <svg viewBox="0 0 287 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <mask id="symbol-path" maskUnits="userSpaceOnUse" x="72" y="49" width="142" height="192" fill="black">
-                                    <rect fill="white" x="72" y="49" width="142" height="192"/>
-                                    <path d="M189 139C193.407 132.258 196 124.071 196 116C196 95.3395 180.363 77.9239 160 75V55H139V75H130V55H109V75H78V101H100V189H78V215H109V235H130V215H139V235H160V215H166C188.881 215 208 196.835 208 174C208 160.106 200.646 146.612 189 139V139ZM125 158H167C175.741 158 182 165.277 182 174C182 182.723 175.741 189 167 189H125V158ZM125 132V101H154C162.741 101 170 107.277 170 116C170 124.723 162.741 132 154 132H125Z"/>
-                                </mask>
-                                <path d="M189 139C193.407 132.258 196 124.071 196 116C196 95.3395 180.363 77.9239 160 75V55H139V75H130V55H109V75H78V101H100V189H78V215H109V235H130V215H139V235H160V215H166C188.881 215 208 196.835 208 174C208 160.106 200.646 146.612 189 139V139ZM125 158H167C175.741 158 182 165.277 182 174C182 182.723 175.741 189 167 189H125V158ZM125 132V101H154C162.741 101 170 107.277 170 116C170 124.723 162.741 132 154 132H125Z" fill="url(#paint0_radial_1228_30377)"/>
-                                <g clip-path="url(#symbol-paint)" data-figma-skip-parse="true" mask="url(#symbol-path)"><g transform="matrix(0 0.09 -0.0895264 0 143 145)"><foreignObject x="-1061.13" y="-1061.13" width="2122.26" height="2122.26"><div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 90deg,rgba(198, 184, 253, 1) 0deg,rgba(255, 255, 255, 1) 37.1832deg,rgba(198, 184, 253, 1) 67.9576deg,rgba(255, 255, 255, 1) 99.3096deg,rgba(197, 183, 253, 1) 123.815deg,rgba(255, 255, 255, 1) 147.881deg,rgba(221, 215, 251, 1) 184.404deg,rgba(255, 255, 255, 1) 222.69deg,rgba(210, 204, 249, 1) 253.813deg,rgba(255, 255, 255, 1) 288.651deg,rgba(199, 193, 248, 1) 317.245deg,rgba(194, 188, 248, 1) 360deg);height:100%;width:100%;opacity:1"></div></foreignObject></g></g><path d="M160 75H154.498V79.7681L159.218 80.4457L160 75ZM160 55H165.502V49.4984H160V55ZM139 55V49.4984H133.498V55H139ZM139 75V80.5016H144.502V75H139ZM130 75H124.498V80.5016H130V75ZM130 55H135.502V49.4984H130V55ZM109 55V49.4984H103.498V55H109ZM109 75V80.5016H114.502V75H109ZM78 75V69.4984H72.4984V75H78ZM78 101H72.4984V106.502H78V101ZM100 101H105.502V95.4984H100V101ZM100 189V194.502H105.502V189H100ZM78 189V183.498H72.4984V189H78ZM78 215H72.4984V220.502H78V215ZM109 215H114.502V209.498H109V215ZM109 235H103.498V240.502H109V235ZM130 235V240.502H135.502V235H130ZM130 215V209.498H124.498V215H130ZM139 215H144.502V209.498H139V215ZM139 235H133.498V240.502H139V235ZM160 235V240.502H165.502V235H160ZM160 215V209.498H154.498V215H160ZM125 158V152.498H119.498V158H125ZM125 189H119.498V194.502H125V189ZM125 132H119.498V137.502H125V132ZM125 101V95.4984H119.498V101H125ZM189 139L193.605 142.01C198.559 134.432 201.502 125.208 201.502 116H196H190.498C190.498 122.934 188.255 130.085 184.395 135.99L189 139ZM196 116H201.502C201.502 92.5087 183.759 72.8535 160.782 69.5543L160 75L159.218 80.4457C176.967 82.9943 190.498 98.1704 190.498 116H196ZM160 75H165.502V55H160H154.498V75H160ZM160 55V49.4984H139V55V60.5016H160V55ZM139 55H133.498V75H139H144.502V55H139ZM139 75V69.4984H130V75V80.5016H139V75ZM130 75H135.502V55H130H124.498V75H130ZM130 55V49.4984H109V55V60.5016H130V55ZM109 55H103.498V75H109H114.502V55H109ZM109 75V69.4984H78V75V80.5016H109V75ZM78 75H72.4984V101H78H83.5016V75H78ZM78 101V106.502H100V101V95.4984H78V101ZM100 101H94.4984V189H100H105.502V101H100ZM100 189V183.498H78V189V194.502H100V189ZM78 189H72.4984V215H78H83.5016V189H78ZM78 215V220.502H109V215V209.498H78V215ZM109 215H103.498V235H109H114.502V215H109ZM109 235V240.502H130V235V229.498H109V235ZM130 235H135.502V215H130H124.498V235H130ZM130 215V220.502H139V215V209.498H130V215ZM139 215H133.498V235H139H144.502V215H139ZM139 235V240.502H160V235V229.498H139V235ZM160 235H165.502V215H160H154.498V235H160ZM160 215V220.502H166V215V209.498H160V215ZM166 215V220.502C191.75 220.502 213.502 200.041 213.502 174H208H202.498C202.498 193.63 186.013 209.498 166 209.498V215ZM208 174H213.502C213.502 158.233 205.198 143.014 192.01 134.395L189 139L185.99 143.605C196.095 150.209 202.498 161.978 202.498 174H208ZM125 158V163.502H167V158V152.498H125V158ZM167 158V163.502C172.244 163.502 176.498 167.835 176.498 174H182H187.502C187.502 162.718 179.238 152.498 167 152.498V158ZM182 174H176.498C176.498 179.689 172.698 183.498 167 183.498V189V194.502C178.784 194.502 187.502 185.757 187.502 174H182ZM167 189V183.498H125V189V194.502H167V189ZM125 189H130.502V158H125H119.498V189H125ZM125 132H130.502V101H125H119.498V132H125ZM125 101V106.502H154V101V95.4984H125V101ZM154 101V106.502C160.174 106.502 164.498 110.766 164.498 116H170H175.502C175.502 103.787 165.308 95.4984 154 95.4984V101ZM170 116H164.498C164.498 121.689 159.699 126.498 154 126.498V132V137.502C165.783 137.502 175.502 127.758 175.502 116H170ZM154 132V126.498H125V132V137.502H154V132Z" data-figma-gradient-fill="{&#34;type&#34;:&#34;GRADIENT_ANGULAR&#34;,&#34;stops&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.77647060155868530,&#34;g&#34;:0.72156864404678345,&#34;b&#34;:0.99215686321258545,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.10328663140535355},{&#34;color&#34;:{&#34;r&#34;:0.77647060155868530,&#34;g&#34;:0.72156864404678345,&#34;b&#34;:0.99215686321258545,&#34;a&#34;:1.0},&#34;position&#34;:0.18877109885215759},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.27586010098457336},{&#34;color&#34;:{&#34;r&#34;:0.77562457323074341,&#34;g&#34;:0.72037720680236816,&#34;b&#34;:0.99230766296386719,&#34;a&#34;:1.0},&#34;position&#34;:0.34392943978309631},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.41077980399131775},{&#34;color&#34;:{&#34;r&#34;:0.86871355772018433,&#34;g&#34;:0.84704500436782837,&#34;b&#34;:0.98557496070861816,&#34;a&#34;:1.0},&#34;position&#34;:0.51223438978195190},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.61858350038528442},{&#34;color&#34;:{&#34;r&#34;:0.82372629642486572,&#34;g&#34;:0.80128210783004761,&#34;b&#34;:0.98014545440673828,&#34;a&#34;:1.0},&#34;position&#34;:0.7050364613533020},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.80180805921554565},{&#34;color&#34;:{&#34;r&#34;:0.78261274099349976,&#34;g&#34;:0.75945967435836792,&#34;b&#34;:0.97518348693847656,&#34;a&#34;:1.0},&#34;position&#34;:0.88123685121536255},{&#34;color&#34;:{&#34;r&#34;:0.76078432798385620,&#34;g&#34;:0.73725491762161255,&#34;b&#34;:0.97254902124404907,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;stopsVar&#34;:[{&#34;color&#34;:{&#34;r&#34;:0.77647060155868530,&#34;g&#34;:0.72156864404678345,&#34;b&#34;:0.99215686321258545,&#34;a&#34;:1.0},&#34;position&#34;:0.0},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.10328663140535355},{&#34;color&#34;:{&#34;r&#34;:0.77647060155868530,&#34;g&#34;:0.72156864404678345,&#34;b&#34;:0.99215686321258545,&#34;a&#34;:1.0},&#34;position&#34;:0.18877109885215759},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.27586010098457336},{&#34;color&#34;:{&#34;r&#34;:0.77562457323074341,&#34;g&#34;:0.72037720680236816,&#34;b&#34;:0.99230766296386719,&#34;a&#34;:1.0},&#34;position&#34;:0.34392943978309631},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.41077980399131775},{&#34;color&#34;:{&#34;r&#34;:0.86871355772018433,&#34;g&#34;:0.84704500436782837,&#34;b&#34;:0.98557496070861816,&#34;a&#34;:1.0},&#34;position&#34;:0.51223438978195190},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.61858350038528442},{&#34;color&#34;:{&#34;r&#34;:0.82372629642486572,&#34;g&#34;:0.80128210783004761,&#34;b&#34;:0.98014545440673828,&#34;a&#34;:1.0},&#34;position&#34;:0.7050364613533020},{&#34;color&#34;:{&#34;r&#34;:1.0,&#34;g&#34;:1.0,&#34;b&#34;:1.0,&#34;a&#34;:1.0},&#34;position&#34;:0.80180805921554565},{&#34;color&#34;:{&#34;r&#34;:0.78261274099349976,&#34;g&#34;:0.75945967435836792,&#34;b&#34;:0.97518348693847656,&#34;a&#34;:1.0},&#34;position&#34;:0.88123685121536255},{&#34;color&#34;:{&#34;r&#34;:0.76078432798385620,&#34;g&#34;:0.73725491762161255,&#34;b&#34;:0.97254902124404907,&#34;a&#34;:1.0},&#34;position&#34;:1.0}],&#34;transform&#34;:{&#34;m00&#34;:7.9602047270920483e-15,&#34;m01&#34;:-179.05276489257812,&#34;m02&#34;:232.52638244628906,&#34;m10&#34;:180.0,&#34;m11&#34;:-3.2454757197680761e-13,&#34;m12&#34;:55.0},&#34;opacity&#34;:1.0,&#34;blendMode&#34;:&#34;NORMAL&#34;,&#34;visible&#34;:true}" mask="url(#symbol-path)"/>
-                                <defs>
-                                    <clipPath id="symbol-paint">
-                                        <path d="M160 75H154.498V79.7681L159.218 80.4457L160 75ZM160 55H165.502V49.4984H160V55ZM139 55V49.4984H133.498V55H139ZM139 75V80.5016H144.502V75H139ZM130 75H124.498V80.5016H130V75ZM130 55H135.502V49.4984H130V55ZM109 55V49.4984H103.498V55H109ZM109 75V80.5016H114.502V75H109ZM78 75V69.4984H72.4984V75H78ZM78 101H72.4984V106.502H78V101ZM100 101H105.502V95.4984H100V101ZM100 189V194.502H105.502V189H100ZM78 189V183.498H72.4984V189H78ZM78 215H72.4984V220.502H78V215ZM109 215H114.502V209.498H109V215ZM109 235H103.498V240.502H109V235ZM130 235V240.502H135.502V235H130ZM130 215V209.498H124.498V215H130ZM139 215H144.502V209.498H139V215ZM139 235H133.498V240.502H139V235ZM160 235V240.502H165.502V235H160ZM160 215V209.498H154.498V215H160ZM125 158V152.498H119.498V158H125ZM125 189H119.498V194.502H125V189ZM125 132H119.498V137.502H125V132ZM125 101V95.4984H119.498V101H125ZM189 139L193.605 142.01C198.559 134.432 201.502 125.208 201.502 116H196H190.498C190.498 122.934 188.255 130.085 184.395 135.99L189 139ZM196 116H201.502C201.502 92.5087 183.759 72.8535 160.782 69.5543L160 75L159.218 80.4457C176.967 82.9943 190.498 98.1704 190.498 116H196ZM160 75H165.502V55H160H154.498V75H160ZM160 55V49.4984H139V55V60.5016H160V55ZM139 55H133.498V75H139H144.502V55H139ZM139 75V69.4984H130V75V80.5016H139V75ZM130 75H135.502V55H130H124.498V75H130ZM130 55V49.4984H109V55V60.5016H130V55ZM109 55H103.498V75H109H114.502V55H109ZM109 75V69.4984H78V75V80.5016H109V75ZM78 75H72.4984V101H78H83.5016V75H78ZM78 101V106.502H100V101V95.4984H78V101ZM100 101H94.4984V189H100H105.502V101H100ZM100 189V183.498H78V189V194.502H100V189ZM78 189H72.4984V215H78H83.5016V189H78ZM78 215V220.502H109V215V209.498H78V215ZM109 215H103.498V235H109H114.502V215H109ZM109 235V240.502H130V235V229.498H109V235ZM130 235H135.502V215H130H124.498V235H130ZM130 215V220.502H139V215V209.498H130V215ZM139 215H133.498V235H139H144.502V215H139ZM139 235V240.502H160V235V229.498H139V235ZM160 235H165.502V215H160H154.498V235H160ZM160 215V220.502H166V215V209.498H160V215ZM166 215V220.502C191.75 220.502 213.502 200.041 213.502 174H208H202.498C202.498 193.63 186.013 209.498 166 209.498V215ZM208 174H213.502C213.502 158.233 205.198 143.014 192.01 134.395L189 139L185.99 143.605C196.095 150.209 202.498 161.978 202.498 174H208ZM125 158V163.502H167V158V152.498H125V158ZM167 158V163.502C172.244 163.502 176.498 167.835 176.498 174H182H187.502C187.502 162.718 179.238 152.498 167 152.498V158ZM182 174H176.498C176.498 179.689 172.698 183.498 167 183.498V189V194.502C178.784 194.502 187.502 185.757 187.502 174H182ZM167 189V183.498H125V189V194.502H167V189ZM125 189H130.502V158H125H119.498V189H125ZM125 132H130.502V101H125H119.498V132H125ZM125 101V106.502H154V101V95.4984H125V101ZM154 101V106.502C160.174 106.502 164.498 110.766 164.498 116H170H175.502C175.502 103.787 165.308 95.4984 154 95.4984V101ZM170 116H164.498C164.498 121.689 159.699 126.498 154 126.498V132V137.502C165.783 137.502 175.502 127.758 175.502 116H170ZM154 132V126.498H125V132V137.502H154V132Z" mask="url(#symbol-path)"/>
-                                    </clipPath>
-                                    <radialGradient id="paint0_radial_1228_30377" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(143.036 144.988) scale(185.375 185.002)">
-                                        <stop offset="0.24" stop-color="#021E53"/>
-                                        <stop offset="0.35" stop-color="#032C5D"/>
-                                        <stop offset="1" stop-color="#00003F"/>
-                                    </radialGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
-                    <div data-moving-orbit data-moving-center data-moving-right class="hero__animation-outer">
-                        <div class="hero__animation-outer-orbit">
-                            <img src="./wp-content/themes/portfolio-crypto/dist/img/hero/layer-orbit.svg" alt="">
-                        </div>
-                        <div class="hero__animation-outer-tokens">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-1.svg" alt="">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-2.svg" alt="">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-3.svg" alt="">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-4.svg" alt="">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-5.svg" alt="">
-                            <img data-moving data-moving-left src="./wp-content/themes/portfolio-crypto/dist/img/hero/token-6.svg" alt="">
-                        </div>
+
+                    <!-- Column 2: Live Crypto Chart / TradingView Widget -->
+                    <div class="hero__cards-col">
+                        <article class="showcase-card balance-preview tv-market-card" id="live-crypto-card">
+                            <div class="card-top-bar">
+                                <div class="card-top-title">
+                                    <span>Crypto Market</span>
+                                    <span class="tv-badge">LIVE</span>
+                                </div>
+                                <span style="font-size:11px;color:#8c8f99;">TradingView</span>
+                            </div>
+
+                            <div class="tv-symbol-tabs" role="group" aria-label="Select cryptocurrency">
+                                <button type="button" data-tv-symbol="btc" aria-pressed="true" class="selected">BTC</button>
+                                <button type="button" data-tv-symbol="eth" aria-pressed="false">ETH</button>
+                                <button type="button" data-tv-symbol="sol" aria-pressed="false">SOL</button>
+                                <button type="button" data-tv-symbol="usdt" aria-pressed="false">USDT</button>
+                            </div>
+
+                            <div class="tv-chart-area">
+                                <div class="tv-chart-host"></div>
+                                <div class="tv-chart-fallback" hidden>
+                                    <div class="balance-caption">Total Volume (24h)</div>
+                                    <div class="balance-value">$24,850,000<span>.00 USD</span></div>
+                                    <svg class="balance-graph" viewBox="0 0 320 130" aria-hidden="true">
+                                        <defs>
+                                            <linearGradient id="heroBalanceFill" x1="0" y1="0" x2="0" y2="1">
+                                                <stop stop-color="#ff6600" stop-opacity=".35"/>
+                                                <stop offset="1" stop-color="#ff6600" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0 110 C20 110 15 65 35 80 S60 110 75 55 S95 90 110 60 S135 85 150 35 S170 65 185 45 S210 65 230 20 S255 55 275 25 S300 40 320 8 V130 H0Z" fill="url(#heroBalanceFill)"/>
+                                        <path d="M0 110 C20 110 15 65 35 80 S60 110 75 55 S95 90 110 60 S135 85 150 35 S170 65 185 45 S210 65 230 20 S255 55 275 25 S300 40 320 8" fill="none" stroke="#ff6600" stroke-width="2.5"/>
+                                    </svg>
+                                    <div class="balance-bottom">
+                                        <span>24h Performance</span>
+                                        <b style="color:#10b981;font-weight:700;">↗ +12.8%</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tv-feed-footer">
+                                <span class="tv-feed-status" role="status">TradingView · BINANCE</span>
+                                <span class="tv-quote-unit">USDT</span>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </section>
 
     <section class="section cards" id="section-cards-2">
@@ -1022,6 +1135,7 @@ form.append('<input type="hidden" name="vx_url" value="'+window.location.href+'"
 </script> 
 
 
+<script src="./assets/hero-cards.js"></script>
 </body>
 
 </html>
